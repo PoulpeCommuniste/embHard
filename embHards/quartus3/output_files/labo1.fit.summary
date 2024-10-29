@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Oct 26 13:42:03 2024
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : labo1
+Top-level Entity Name : labo1
+Family : Cyclone IV E
+Device : EP4CE30F23C7
+Timing Models : Final
+Total logic elements : 4,421 / 28,848 ( 15 % )
+    Total combinational functions : 3,850 / 28,848 ( 13 % )
+    Dedicated logic registers : 2,818 / 28,848 ( 10 % )
+Total registers : 2886
+Total pins : 92 / 329 ( 28 % )
+Total virtual pins : 0
+Total memory bits : 65,088 / 608,256 ( 11 % )
+Embedded Multiplier 9-bit elements : 6 / 132 ( 5 % )
+Total PLLs : 1 / 4 ( 25 % )
