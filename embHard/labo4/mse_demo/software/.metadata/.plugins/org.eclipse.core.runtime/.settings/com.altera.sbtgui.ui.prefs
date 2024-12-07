@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel
+newSoftwareExampleWizardPage.sopcinfoFile=/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp

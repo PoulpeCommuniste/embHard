@@ -1,0 +1,25 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst unsaved.CPU.reset_bridge -pg 1
+preplace inst unsaved.LEDs -pg 1 -lvl 3 -y 300
+preplace inst unsaved.jtag_uart -pg 1 -lvl 3 -y 400
+preplace inst unsaved.SDRAM_controller -pg 1 -lvl 3 -y 200
+preplace inst unsaved.sys_sdram_pll_0 -pg 1 -lvl 2 -y 180
+preplace inst unsaved.CPU.cpu -pg 1
+preplace inst unsaved.CPU -pg 1 -lvl 3 -y 50
+preplace inst unsaved.sysid_qsys_0 -pg 1 -lvl 3 -y 500
+preplace inst unsaved.CPU.clock_bridge -pg 1
+preplace inst unsaved.clk_0 -pg 1 -lvl 1 -y 30
+preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst unsaved.sys_sdram_pll_0.reset_from_locked -pg 1
+preplace inst unsaved.sys_sdram_pll_0.sys_pll -pg 1
+preplace netloc POINT_TO_POINT<net_container>unsaved</net_container>(MASTER)clk_0.clk,(SLAVE)sys_sdram_pll_0.ref_clk) 1 1 1 280
+preplace netloc POINT_TO_POINT<net_container>unsaved</net_container>(SLAVE)sys_sdram_pll_0.ref_reset,(MASTER)clk_0.clk_reset) 1 1 1 260
+preplace netloc FAN_OUT<net_container>unsaved</net_container>(SLAVE)LEDs.clk,(SLAVE)jtag_uart.clk,(MASTER)sys_sdram_pll_0.sys_clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)CPU.clk) 1 2 1 520
+preplace netloc POINT_TO_POINT<net_container>unsaved</net_container>(MASTER)sys_sdram_pll_0.sdram_clk,(SLAVE)SDRAM_controller.clk) 1 2 1 N
+preplace netloc FAN_IN<net_container>unsaved</net_container>(MASTER)CPU.data_master,(MASTER)CPU.instruction_master,(SLAVE)CPU.debug_mem_slave) 1 2 2 560 190 920
+preplace netloc FAN_OUT<net_container>unsaved</net_container>(MASTER)sys_sdram_pll_0.reset_source,(SLAVE)SDRAM_controller.reset,(SLAVE)sysid_qsys_0.reset,(SLAVE)CPU.reset,(SLAVE)LEDs.reset,(SLAVE)jtag_uart.reset) 1 2 1 540
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)unsaved.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)clk_0.clk_in,(SLAVE)unsaved.clk) 1 0 1 NJ
+levelinfo -pg 1 0 50 960
+levelinfo -hier unsaved 60 90 360 680 940

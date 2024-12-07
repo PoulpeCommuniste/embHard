@@ -1,0 +1,29 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst model.LEDs_controller_0 -pg 1 -lvl 4 -y 290
+preplace inst model.timer_0 -pg 1 -lvl 4 -y 730
+preplace inst model.sys_sdram_pll_0.reset_from_locked -pg 1
+preplace inst model.sys_sdram_pll_0 -pg 1 -lvl 2 -y 580
+preplace inst model.CPU.cpu -pg 1
+preplace inst model.clk_0 -pg 1 -lvl 1 -y 580
+preplace inst model.sysid_qsys_0 -pg 1 -lvl 4 -y 390
+preplace inst model.CPU.clock_bridge -pg 1
+preplace inst model.CPU -pg 1 -lvl 3 -y 380
+preplace inst model.CPU.reset_bridge -pg 1
+preplace inst model.sys_sdram_pll_0.sys_pll -pg 1
+preplace inst model -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst model.jtag_uart -pg 1 -lvl 4 -y 470
+preplace inst model.SDRAM_controller -pg 1 -lvl 4 -y 610
+preplace inst model.LCD_DMA_CTRL_0 -pg 1 -lvl 4 -y 40
+preplace netloc EXPORT<net_container>model</net_container>(SLAVE)model.lcd_dma_ctrl_0_conduit_end,(SLAVE)LCD_DMA_CTRL_0.conduit_end) 1 0 4 NJ 90 NJ 90 NJ 90 NJ
+preplace netloc EXPORT<net_container>model</net_container>(SLAVE)model.sdram_controller_wire,(SLAVE)SDRAM_controller.wire) 1 0 4 NJ 520 NJ 520 NJ 680 NJ
+preplace netloc INTERCONNECT<net_container>model</net_container>(SLAVE)sysid_qsys_0.control_slave,(MASTER)LCD_DMA_CTRL_0.avalon_master,(MASTER)CPU.data_master,(SLAVE)LEDs_controller_0.avalon_slave_0,(SLAVE)CPU.debug_mem_slave,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)timer_0.s1,(MASTER)CPU.instruction_master,(SLAVE)SDRAM_controller.s1,(SLAVE)LCD_DMA_CTRL_0.avalon_slave_0) 1 2 3 710 540 1110 30 1410
+preplace netloc FAN_OUT<net_container>model</net_container>(MASTER)CPU.irq,(SLAVE)timer_0.irq,(SLAVE)jtag_uart.irq) 1 3 1 1070
+preplace netloc INTERCONNECT<net_container>model</net_container>(SLAVE)jtag_uart.reset,(MASTER)clk_0.clk_reset,(SLAVE)LCD_DMA_CTRL_0.reset_sink,(SLAVE)LEDs_controller_0.reset_sink,(SLAVE)SDRAM_controller.reset,(SLAVE)CPU.reset,(MASTER)CPU.debug_reset_request,(SLAVE)timer_0.reset,(SLAVE)sys_sdram_pll_0.ref_reset,(SLAVE)sysid_qsys_0.reset) 1 1 3 410 540 690 560 1090
+preplace netloc EXPORT<net_container>model</net_container>(SLAVE)model.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>model</net_container>(MASTER)sys_sdram_pll_0.sys_clk,(SLAVE)LCD_DMA_CTRL_0.clock_sink,(SLAVE)jtag_uart.clk,(SLAVE)SDRAM_controller.clk,(SLAVE)LEDs_controller_0.clock,(SLAVE)sysid_qsys_0.clk,(SLAVE)CPU.clk,(SLAVE)timer_0.clk) 1 2 2 670 520 1130
+preplace netloc POINT_TO_POINT<net_container>model</net_container>(MASTER)clk_0.clk,(SLAVE)sys_sdram_pll_0.ref_clk) 1 1 1 N
+preplace netloc EXPORT<net_container>model</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)model.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>model</net_container>(SLAVE)LEDs_controller_0.conduit_end_1,(SLAVE)model.leds_external_connection_export) 1 0 4 NJ 340 NJ 340 NJ 340 NJ
+levelinfo -pg 1 0 200 1450
+levelinfo -hier model 210 240 490 830 1220 1430

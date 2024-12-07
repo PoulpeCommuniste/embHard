@@ -1,0 +1,38 @@
+sans opti
+hallotime convolution grayscale: 450
+time sobel x: 722141791
+time sobel y: 723810066
+time sobel threshold : 101971725
+-O1
+hallotime convolution grayscale: 421
+time sobel x: 129976164
+time sobel y: 129948731
+time sobel threshold : 33653622
+-O2
+hallotime convolution grayscale: 411
+time sobel x: 109461805
+time sobel y: 109603424
+time sobel threshold : 31825561
+-O3
+hallotime convolution grayscale: 366
+time sobel x: 28543015
+time sobel y: 26367225
+time sobel threshold : 31033575
+-1 boucle
+hallotime convolution grayscale: 446
+time sobel x: 536824012
+time sobel y: 537048242
+time sobel threshold : 102361627
+-0 boucle hallotime convolution grayscale: 450
+time sobel x: 422351730
+time sobel y: 423080566
+time sobel threshold : 103208549
+⨪0 enlever l'appel de fonction ”in-line"
+hallotime convolution grayscale: 370
+time sobel x: 28920904
+time sobel y: 26718426
+time sobel threshold : 31539322
+# avec le sobel_complete
+hallotime convolution grayscale: 404
+time sobel: 55395192
+time sobel threshold : 31157081

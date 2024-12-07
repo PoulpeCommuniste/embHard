@@ -1,0 +1,1936 @@
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 09:38:23 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is lower than image size
+#    Time: 410 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=475 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 475 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(95): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(97): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(122): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(124): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(95): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(97): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(122): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(124): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 14:05:15 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 14:05:15 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:05:15 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 14:05:15 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 14:05:15 on Nov 06,2024, Elapsed time: 4:26:52
+# Errors: 3, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 14:05:15 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is lower than image size
+#    Time: 410 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=475 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 475 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:08:16 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(95): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(97): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(122): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(124): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(95): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(97): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(122): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(124): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 14:08:16 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:08:16 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 14:08:16 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:08:16 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 14:08:17 on Nov 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 14:08:17 on Nov 06,2024, Elapsed time: 0:03:02
+# Errors: 3, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 14:08:17 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is lower than image size
+#    Time: 410 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=475 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 475 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:20:58 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 14:20:58 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:20:58 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 14:20:58 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:20:58 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 14:20:58 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 14:20:58 on Nov 06,2024, Elapsed time: 0:12:41
+# Errors: 3, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 14:20:58 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is lower than image size
+#    Time: 610 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=675 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 675 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:25:16 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 14:25:16 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:25:16 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 14:25:16 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:25:16 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 14:25:16 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 14:25:16 on Nov 06,2024, Elapsed time: 0:04:18
+# Errors: 3, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 14:25:16 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: LCD DMA test: number of dma accesses is higher than image size
+#    Time: 610 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 611 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=675 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 675 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:32:16 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): (vcom-1581) No feasible entries for infix operator '*'.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): Cannot resolve expression type of infix expression.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): (vcom-1583) Illegal type converson from 'unknown' to 'ieee.NUMERIC_STD.UNSIGNED' (operand type is not known).
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Note: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(237): VHDL Compiler exiting
+# End time: 14:32:16 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 20
+# ** Error: /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./start.do line 48
+# /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval vcom -work work $VHDL_SOURCE_DIR/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 3)
+#     invoked from within
+# "design"
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:32:33 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): (vcom-1581) No feasible entries for infix operator '*'.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): Cannot resolve expression type of infix expression.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): (vcom-1583) Illegal type converson from 'unknown' to 'ieee.NUMERIC_STD.UNSIGNED' (operand type is not known).
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Note: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(237): VHDL Compiler exiting
+# End time: 14:32:33 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 20
+# ** Error: /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./start.do line 48
+# /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval vcom -work work $VHDL_SOURCE_DIR/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 3)
+#     invoked from within
+# "design"
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:32:38 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): (vcom-1581) No feasible entries for infix operator '*'.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): Cannot resolve expression type of infix expression.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(162): (vcom-1583) Illegal type converson from 'unknown' to 'ieee.NUMERIC_STD.UNSIGNED' (operand type is not known).
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Note: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(237): VHDL Compiler exiting
+# End time: 14:32:38 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 20
+# ** Error: /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./start.do line 48
+# /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval vcom -work work $VHDL_SOURCE_DIR/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 3)
+#     invoked from within
+# "design"
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:56 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 14:33:56 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:56 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 14:33:56 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:33:56 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 14:33:56 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 14:33:56 on Nov 06,2024, Elapsed time: 0:08:40
+# Errors: 6, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 14:33:56 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: LCD DMA test: number of dma accesses is higher than image size
+#    Time: 810 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 811 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=875 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 875 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:44:43 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 14:44:43 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:44:43 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 14:44:43 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:44:43 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 14:44:44 on Nov 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 14:44:44 on Nov 06,2024, Elapsed time: 0:10:48
+# Errors: 3, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 14:44:44 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: LCD DMA test: number of dma accesses is higher than image size
+#    Time: 810 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 811 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=875 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 875 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:48:46 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 14:48:46 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:48:46 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 14:48:47 on Nov 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:48:47 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 14:48:47 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 14:48:47 on Nov 06,2024, Elapsed time: 0:04:03
+# Errors: 3, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 14:48:47 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is lower than image size
+#    Time: 590 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=655 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 655 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:50:49 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(169): near "when": (vcom-1576) expecting END.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Note: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(239): VHDL Compiler exiting
+# End time: 14:50:50 on Nov 06,2024, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 20
+# ** Error: /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./start.do line 48
+# /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval vcom -work work $VHDL_SOURCE_DIR/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 3)
+#     invoked from within
+# "design"
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:52:34 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(96): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(123): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 14:52:34 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:52:34 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 14:52:34 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:52:34 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 14:52:34 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 14:52:34 on Nov 06,2024, Elapsed time: 0:03:47
+# Errors: 4, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 14:52:34 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:11 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 15:04:11 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:11 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 15:04:11 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:04:11 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 15:04:11 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 15:04:11 on Nov 06,2024, Elapsed time: 0:11:37
+# Errors: 0, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 15:04:11 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:07:15 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(170): near "'": syntax error
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(49): Nonresolved signal 'DMA_Current_state' has multiple sources.
+#   Drivers:
+#     ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(237):Conditional signal assignment line__237
+#     ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(145):Process DMA_STATE_MACHINE
+#        Driven at:
+#           ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(170)
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Note: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(244): VHDL Compiler exiting
+# End time: 15:07:15 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 20
+# ** Error: /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./start.do line 48
+# /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval vcom -work work $VHDL_SOURCE_DIR/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 3)
+#     invoked from within
+# "design"
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:08:10 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Error: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(49): Nonresolved signal 'DMA_Current_state' has multiple sources.
+#   Drivers:
+#     ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(237):Conditional signal assignment line__237
+#     ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(145):Process DMA_STATE_MACHINE
+#        Driven at:
+#           ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(170)
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Note: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(244): VHDL Compiler exiting
+# End time: 15:08:10 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 20
+# ** Error: /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+# Error in macro ./start.do line 48
+# /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/vcom failed.
+#     while executing
+# "vcom -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval vcom -work work $VHDL_SOURCE_DIR/DMA_LCD_ctrl.vhd"
+#     ("eval" body line 3)
+#     invoked from within
+# "design"
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:08:45 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 15:08:45 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:08:45 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 15:08:45 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:08:45 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 15:08:45 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 15:08:45 on Nov 06,2024, Elapsed time: 0:04:34
+# Errors: 2, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 15:08:45 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: LCD DMA test: number of dma accesses is higher than image size
+#    Time: 810 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 811 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=875 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 875 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:51 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 15:13:51 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:51 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 15:13:51 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:13:51 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 15:13:51 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 15:13:51 on Nov 06,2024, Elapsed time: 0:05:06
+# Errors: 3, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 15:13:51 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: wrong address
+#    Time: 410 ns  Iteration: 2  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 431 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: wrong address
+#    Time: 490 ns  Iteration: 2  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 511 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: wrong address
+#    Time: 570 ns  Iteration: 2  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 591 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: wrong address
+#    Time: 650 ns  Iteration: 2  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is lower than image size
+#    Time: 670 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=735 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 735 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:22:00 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(99): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(101): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(103): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(105): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(107): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(126): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(128): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(130): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(132): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(134): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 15:22:00 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:22:00 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 15:22:00 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:22:00 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 15:22:00 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 15:22:00 on Nov 06,2024, Elapsed time: 0:08:09
+# Errors: 10, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 15:22:00 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 431 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 511 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 591 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 671 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 751 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 831 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 911 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 991 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 1071 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 1151 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is higher than image size
+#    Time: 1230 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=1295 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 1295 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:48 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(106): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(133): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(106): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(133): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 15:50:48 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:48 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 15:50:48 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:50:48 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 15:50:49 on Nov 06,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 15:50:49 on Nov 06,2024, Elapsed time: 0:28:49
+# Errors: 13, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 15:50:49 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 431 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 511 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 591 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 671 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 751 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 831 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 911 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 991 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 1071 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 1151 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is higher than image size
+#    Time: 1230 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=1295 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 1295 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+do start.do
+# 
+# SET ENVIRONMENT
+# 
+# SET ENVIRONMENT DONE!
+# 
+# 
+# COMPILE DESIGN
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:01:46 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity DMA_LCD_ctrl
+# -- Compiling architecture rtl of DMA_LCD_ctrl
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(106): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(133): (vcom-1937) Choice in CASE statement alternative must be locally static.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(98): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(100): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(102): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(104): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(106): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(125): (vcom-1322) Case statement choice (constant "WRITECOMMAND_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(127): (vcom-1322) Case statement choice (constant "WRITEDATA_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(129): (vcom-1322) Case statement choice (constant "WRITEADDRESS_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(131): (vcom-1322) Case statement choice (constant "LENGTH_ADDR") cannot be checked for array length.
+# ** Warning: ../../src/vhdl/LCD_ctrl/DMA_LCD_ctrl.vhd(133): (vcom-1322) Case statement choice (constant "CONTROL_ADDR") cannot be checked for array length.
+# End time: 16:01:46 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 20
+# COMPILE DESIGN DONE!
+# 
+# 
+# COMPILE TESTBENCH
+# 
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:01:46 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/avalon_pkg/avalon_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package std_logic_textio
+# -- Compiling package avalon_pkg
+# -- Compiling package body avalon_pkg
+# -- Loading package avalon_pkg
+# End time: 16:01:46 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:01:46 on Nov 06,2024
+# vcom -reportprogress 300 -work work ../vhdl/lcd_controller_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_textio
+# -- Loading package std_logic_arith
+# -- Loading package avalon_pkg
+# -- Compiling entity lcd_controller_tb
+# -- Compiling architecture rtl of lcd_controller_tb
+# -- Loading entity DMA_LCD_ctrl
+# End time: 16:01:46 on Nov 06,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# COMPILE TESTBENCH DONE!
+# 
+# 
+# RUN SIMULATION
+# 
+# End time: 16:01:47 on Nov 06,2024, Elapsed time: 0:10:58
+# Errors: 13, Warnings: 0
+# vsim -t 1ns -l simulation_logfile.txt work.lcd_controller_tb 
+# Start time: 16:01:47 on Nov 06,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.std_logic_textio(body)
+# Loading ieee.std_logic_arith(body)
+# Loading work.avalon_pkg(body)
+# Loading work.lcd_controller_tb(rtl)
+# Loading work.dma_lcd_ctrl(rtl)
+# [LCD_DMA_TEST]
+# [WRITE INSTRUCTION - IMG_PTR_REG_ADDR] time=95 ns  ADDRESS=010  DATA WRITE=00000000000000001101101001111010
+# [WRITE INSTRUCTION - IMG_SIZE_REG_ADDR] time=155 ns  ADDRESS=011  DATA WRITE=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_PTR_REG_ADDR] time=215 ns  ADDRESS=010  DATA READ=00000000000000000000000000001010
+# [READ INSTRUCTION - IMG_SIZE_REG_ADDR] time=275 ns  ADDRESS=011  DATA READ=00000000000000000000000000001010
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=335 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000001
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 371 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 431 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 511 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 591 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 671 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 751 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 831 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 911 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 991 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 1071 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: AV dummy slave: avm_read_s is still high
+#    Time: 1151 ns  Iteration: 0  Region: /lcd_controller_tb/av_dummy_slave_gen
+# ** Error: LCD DMA test: number of dma accesses is higher than image size
+#    Time: 1230 ns  Iteration: 2  Region: /lcd_controller_tb/lcd_dma_test_gen
+# [WRITE INSTRUCTION - CTRL_REG_ADDR] time=1295 ns  ADDRESS=100  DATA WRITE=00000000000000000000000000000100
+# ** Error: LCD DMA test: IRQ flag couldn't be cleared
+#    Time: 1295 ns  Iteration: 0  Region: /lcd_controller_tb/lcd_dma_test_gen
+# 
+# RUN TESTBENCH DONE!
+# 
+# End time: 16:06:12 on Nov 06,2024, Elapsed time: 0:04:25
+# Errors: 13, Warnings: 0

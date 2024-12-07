@@ -1,0 +1,1208 @@
+Analysis & Synthesis report for labo1
+Tue Nov  5 14:08:20 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis IP Cores Summary
+  6. Analysis & Synthesis Messages
+  7. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++-----------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status       ; Failed - Tue Nov  5 14:08:20 2024           ;
+; Quartus Prime Version             ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                     ; labo1                                       ;
+; Top-level Entity Name             ; labo1                                       ;
+; Family                            ; Arria II GX                                 ;
+; Logic utilization                 ; N/A until Partition Merge                   ;
+;     Combinational ALUTs           ; N/A until Partition Merge                   ;
+;     Memory ALUTs                  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers     ; N/A until Partition Merge                   ;
+; Total registers                   ; N/A until Partition Merge                   ;
+; Total pins                        ; N/A until Partition Merge                   ;
+; Total virtual pins                ; N/A until Partition Merge                   ;
+; Total block memory bits           ; N/A until Partition Merge                   ;
+; DSP block 18-bit elements         ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PCS    ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PMA    ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PCS ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PMA ; N/A until Partition Merge                   ;
+; Total PLLs                        ; N/A until Partition Merge                   ;
+; Total DLLs                        ; N/A until Partition Merge                   ;
++-----------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                           ; labo1              ; labo1              ;
+; Family name                                                                     ; Arria II GX        ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                        ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                               ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                                                                                         ;
++--------+------------------------------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
+; Vendor ; IP Core Name                       ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                    ; IP Include File                                                    ;
++--------+------------------------------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
+; N/A    ; Qsys                               ; 18.1    ; N/A          ; N/A          ; |labo1|model:inst1                                                                                                                                                                                                                                                 ; /home/deremos/Documents/Master/EmbHard/embHard/quartus3/model.qsys ;
+; Altera ; altera_nios2_gen2                  ; 18.1    ; N/A          ; N/A          ; |labo1|model:inst1|model_CPU:cpu                                                                                                                                                                                                                                   ; /home/deremos/Documents/Master/EmbHard/embHard/quartus3/model.qsys ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu                                                                                                                                                                                                                 ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_bht_module:model_CPU_cpu_bht                                                                                                                                                                      ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_data_module:model_CPU_cpu_dc_data                                                                                                                                                              ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_tag_module:model_CPU_cpu_dc_tag                                                                                                                                                                ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_victim_module:model_CPU_cpu_dc_victim                                                                                                                                                          ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_data_module:model_CPU_cpu_ic_data                                                                                                                                                              ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_tag_module:model_CPU_cpu_ic_tag                                                                                                                                                                ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_register_bank_a_module:model_CPU_cpu_register_bank_a                                                                                                                                              ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_register_bank_b_module:model_CPU_cpu_register_bank_b                                                                                                                                              ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci                                                                                                                                                             ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_avalon_reg:the_model_CPU_cpu_nios2_avalon_reg                                                                                           ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_break:the_model_CPU_cpu_nios2_oci_break                                                                                             ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_dbrk:the_model_CPU_cpu_nios2_oci_dbrk                                                                                               ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_debug:the_model_CPU_cpu_nios2_oci_debug                                                                                             ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_dtrace:the_model_CPU_cpu_nios2_oci_dtrace                                                                                           ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_dtrace:the_model_CPU_cpu_nios2_oci_dtrace|model_CPU_cpu_nios2_oci_td_mode:model_CPU_cpu_nios2_oci_trc_ctrl_td_mode                  ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_fifo:the_model_CPU_cpu_nios2_oci_fifo                                                                                               ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_fifo:the_model_CPU_cpu_nios2_oci_fifo|model_CPU_cpu_nios2_oci_compute_input_tm_cnt:the_model_CPU_cpu_nios2_oci_compute_input_tm_cnt ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_fifo:the_model_CPU_cpu_nios2_oci_fifo|model_CPU_cpu_nios2_oci_fifo_cnt_inc:the_model_CPU_cpu_nios2_oci_fifo_cnt_inc                 ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_fifo:the_model_CPU_cpu_nios2_oci_fifo|model_CPU_cpu_nios2_oci_fifo_wrptr_inc:the_model_CPU_cpu_nios2_oci_fifo_wrptr_inc             ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_im:the_model_CPU_cpu_nios2_oci_im                                                                                                   ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_itrace:the_model_CPU_cpu_nios2_oci_itrace                                                                                           ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_pib:the_model_CPU_cpu_nios2_oci_pib                                                                                                 ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_xbrk:the_model_CPU_cpu_nios2_oci_xbrk                                                                                               ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_ocimem:the_model_CPU_cpu_nios2_ocimem                                                                                                   ;                                                                    ;
+; Altera ; Nios II Processor (6AF7_00A2)      ; N/A     ; Apr 2009     ; OpenCore     ; |labo1|model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_ocimem:the_model_CPU_cpu_nios2_ocimem|model_CPU_cpu_ociram_sp_ram_module:model_CPU_cpu_ociram_sp_ram                                    ;                                                                    ;
+; Altera ; altera_avalon_jtag_uart            ; 18.1    ; N/A          ; N/A          ; |labo1|model:inst1|model_jtag_uart:jtag_uart                                                                                                                                                                                                                       ; /home/deremos/Documents/Master/EmbHard/embHard/quartus3/model.qsys ;
+; Altera ; altera_avalon_new_sdram_controller ; 18.1    ; N/A          ; N/A          ; |labo1|model:inst1|model_SDRAM_controller:sdram_controller                                                                                                                                                                                                         ; /home/deremos/Documents/Master/EmbHard/embHard/quartus3/model.qsys ;
++--------+------------------------------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------+
+OpenCore Simulation-Only Evaluation feature is turned on for all cores in the design.
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue Nov  5 14:07:47 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off labo1 -c labo1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12248): Elaborating Platform Designer system entity "model.qsys"
+Info (12250): 2024.11.05.14:08:00 Progress: Loading quartus3/model.qsys
+Info (12250): 2024.11.05.14:08:00 Progress: Reading input file
+Info (12250): 2024.11.05.14:08:00 Progress: Adding CPU [altera_nios2_gen2 18.1]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module CPU
+Info (12250): 2024.11.05.14:08:01 Progress: Adding LCD_DMA_CTRL_0 [LCD_DMA_CTRL 1.2]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module LCD_DMA_CTRL_0
+Info (12250): 2024.11.05.14:08:01 Progress: Adding LEDs_controller_0 [LEDs_controller 1.0]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module LEDs_controller_0
+Info (12250): 2024.11.05.14:08:01 Progress: Adding SDRAM_controller [altera_avalon_new_sdram_controller 18.1]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module SDRAM_controller
+Info (12250): 2024.11.05.14:08:01 Progress: Adding clk_0 [clock_source 18.1]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module clk_0
+Info (12250): 2024.11.05.14:08:01 Progress: Adding jtag_uart [altera_avalon_jtag_uart 18.1]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module jtag_uart
+Info (12250): 2024.11.05.14:08:01 Progress: Adding sys_sdram_pll_0 [altera_up_avalon_sys_sdram_pll 18.0]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module sys_sdram_pll_0
+Info (12250): 2024.11.05.14:08:01 Progress: Adding sys_sdram_pll_1 [altera_up_avalon_sys_sdram_pll 18.0]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module sys_sdram_pll_1
+Info (12250): 2024.11.05.14:08:01 Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module sysid_qsys_0
+Info (12250): 2024.11.05.14:08:01 Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing module timer_0
+Info (12250): 2024.11.05.14:08:01 Progress: Building connections
+Info (12250): 2024.11.05.14:08:01 Progress: Parameterizing connections
+Info (12250): 2024.11.05.14:08:01 Progress: Validating
+Info (12250): 2024.11.05.14:08:02 Progress: Done reading input file
+Info (12250): Model.SDRAM_controller: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Info (12250): Model.jtag_uart: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info (12250): Model.sys_sdram_pll_0: Refclk Freq: 50.0
+Info (12250): Model.sys_sdram_pll_1: Refclk Freq: 50.0
+Info (12250): Model.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info (12250): Model.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info (12250): Model: Generating model "model" for QUARTUS_SYNTH
+Info (12250): CPU: "model" instantiated altera_nios2_gen2 "CPU"
+Info (12250): LCD_DMA_CTRL_0: "model" instantiated LCD_DMA_CTRL "LCD_DMA_CTRL_0"
+Info (12250): LEDs_controller_0: "model" instantiated LEDs_controller "LEDs_controller_0"
+Info (12250): SDRAM_controller: Starting RTL generation for module 'model_SDRAM_controller'
+Info (12250): SDRAM_controller:   Generation command is [exec /home/deremos/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/deremos/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=model_SDRAM_controller --dir=/tmp/alt0032_1479702959482210371.dir/0004_SDRAM_controller_gen/ --quartus_dir=/home/deremos/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0032_1479702959482210371.dir/0004_SDRAM_controller_gen//model_SDRAM_controller_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): SDRAM_controller: Done RTL generation for module 'model_SDRAM_controller'
+Info (12250): SDRAM_controller: "model" instantiated altera_avalon_new_sdram_controller "SDRAM_controller"
+Info (12250): Jtag_uart: Starting RTL generation for module 'model_jtag_uart'
+Info (12250): Jtag_uart:   Generation command is [exec /home/deremos/intelFPGA_lite/18.1/quartus/linux64/perl/bin/perl -I /home/deremos/intelFPGA_lite/18.1/quartus/linux64/perl/lib -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=model_jtag_uart --dir=/tmp/alt0032_1479702959482210371.dir/0005_jtag_uart_gen/ --quartus_dir=/home/deremos/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0032_1479702959482210371.dir/0005_jtag_uart_gen//model_jtag_uart_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Jtag_uart: Done RTL generation for module 'model_jtag_uart'
+Info (12250): Jtag_uart: "model" instantiated altera_avalon_jtag_uart "jtag_uart"
+Info (12250): Sys_sdram_pll_0: "model" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_0"
+Info (12250): Sys_sdram_pll_1: "model" instantiated altera_up_avalon_sys_sdram_pll "sys_sdram_pll_1"
+Info (12250): Sysid_qsys_0: "model" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info (12250): Timer_0: Starting RTL generation for module 'model_timer_0'
+Info (12250): Timer_0:   Generation command is [exec /home/deremos/intelFPGA_lite/18.1/quartus/linux64//perl/bin/perl -I /home/deremos/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=model_timer_0 --dir=/tmp/alt0032_1479702959482210371.dir/0007_timer_0_gen/ --quartus_dir=/home/deremos/intelFPGA_lite/18.1/quartus --verilog --config=/tmp/alt0032_1479702959482210371.dir/0007_timer_0_gen//model_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info (12250): Timer_0: Done RTL generation for module 'model_timer_0'
+Info (12250): Timer_0: "model" instantiated altera_avalon_timer "timer_0"
+Info (12250): Avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info (12250): Avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info (12250): Mm_interconnect_0: "model" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info (12250): Irq_mapper: "model" instantiated altera_irq_mapper "irq_mapper"
+Info (12250): Rst_controller: "model" instantiated altera_reset_controller "rst_controller"
+Info (12250): Cpu: Starting RTL generation for module 'model_CPU_cpu'
+Info (12250): Cpu:   Generation command is [exec /home/deremos/intelFPGA_lite/18.1/quartus/linux64//eperlcmd -I /home/deremos/intelFPGA_lite/18.1/quartus/linux64//perl/lib -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin/europa -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin/perl_lib -I /home/deremos/intelFPGA_lite/18.1/quartus/sopc_builder/bin -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- /home/deremos/intelFPGA_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=model_CPU_cpu --dir=/tmp/alt0032_1479702959482210371.dir/0010_cpu_gen/ --quartus_bindir=/home/deremos/intelFPGA_lite/18.1/quartus/linux64/ --verilog --config=/tmp/alt0032_1479702959482210371.dir/0010_cpu_gen//model_CPU_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info (12250): Cpu: # 2024.11.05 14:08:08 (*) Starting Nios II generation
+Info (12250): Cpu: # 2024.11.05 14:08:08 (*)   Checking for plaintext license.
+Info (12250): Cpu: # 2024.11.05 14:08:08 (*)   Couldn't query license setup in Quartus directory /home/deremos/intelFPGA_lite/18.1/quartus/linux64/
+Info (12250): Cpu: # 2024.11.05 14:08:08 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info (12250): Cpu: # 2024.11.05 14:08:08 (*)   LM_LICENSE_FILE environment variable is empty
+Info (12250): Cpu: # 2024.11.05 14:08:08 (*)   Plaintext license not found.
+Info (12250): Cpu: # 2024.11.05 14:08:08 (*)   Checking for encrypted license (non-evaluation).
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)   Couldn't query license setup in Quartus directory /home/deremos/intelFPGA_lite/18.1/quartus/linux64/
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)   LM_LICENSE_FILE environment variable is empty
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)   Encrypted license not found.  Defaulting to OCP evaluation license (produces a time-limited SOF)
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)   Elaborating CPU configuration settings
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)   Creating all objects for CPU
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)     Testbench
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)     Instruction decoding
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)       Instruction fields
+Info (12250): Cpu: # 2024.11.05 14:08:09 (*)       Instruction decodes
+Info (12250): Cpu: # 2024.11.05 14:08:10 (*)       Signals for RTL simulation waveforms
+Info (12250): Cpu: # 2024.11.05 14:08:10 (*)       Instruction controls
+Info (12250): Cpu: # 2024.11.05 14:08:10 (*)     Pipeline frontend
+Info (12250): Cpu: # 2024.11.05 14:08:10 (*)     Pipeline backend
+Info (12250): Cpu: # 2024.11.05 14:08:11 (*)   Generating RTL from CPU objects
+Info (12250): Cpu: # 2024.11.05 14:08:13 (*)   Creating encrypted RTL
+Info (12250): Cpu: # 2024.11.05 14:08:13 (*) Done Nios II generation
+Info (12250): Cpu: Done RTL generation for module 'model_CPU_cpu'
+Info (12250): Cpu: "CPU" instantiated altera_nios2_gen2_unit "cpu"
+Info (12250): Sys_pll: "sys_sdram_pll_0" instantiated altera_up_altpll "sys_pll"
+Info (12250): Reset_from_locked: "sys_sdram_pll_0" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info (12250): LCD_DMA_CTRL_0_avalon_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "LCD_DMA_CTRL_0_avalon_master_translator"
+Info (12250): SDRAM_controller_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "SDRAM_controller_s1_translator"
+Info (12250): LCD_DMA_CTRL_0_avalon_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "LCD_DMA_CTRL_0_avalon_master_agent"
+Info (12250): SDRAM_controller_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "SDRAM_controller_s1_agent"
+Info (12250): SDRAM_controller_s1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "SDRAM_controller_s1_agent_rsp_fifo"
+Info (12250): Router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info (12250): Router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info (12250): Router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info (12250): Router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info (12250): Router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info (12250): Router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info (12250): CPU_data_master_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "CPU_data_master_limiter"
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_avalon_sc_fifo.v
+Info (12250): SDRAM_controller_s1_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "SDRAM_controller_s1_burst_adapter"
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_avalon_st_pipeline_base.v
+Info (12250): Cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info (12250): Cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info (12250): Cmd_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_002"
+Info (12250): Cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info (12250): Cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_arbitrator.sv
+Info (12250): Cmd_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_002"
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info (12250): Rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info (12250): Rsp_demux_002: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_002"
+Info (12250): Rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_arbitrator.sv
+Info (12250): Rsp_mux_002: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_002"
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_arbitrator.sv
+Info (12250): CPU_data_master_to_SDRAM_controller_s1_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "CPU_data_master_to_SDRAM_controller_s1_cmd_width_adapter"
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_address_alignment.sv
+Info (12250): Reusing file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_uncompressor.sv
+Info (12250): Avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info (12250): Avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info (12250): Error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info (12250): Error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info (12250): Model: Done "model" with 46 modules, 73 files
+Info (12249): Finished elaborating Platform Designer system entity "model.qsys"
+Info (12021): Found 1 design units, including 1 entities, in source file labo1.bdf
+    Info (12023): Found entity 1: labo1
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/model.v
+    Info (12023): Found entity 1: model File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/model.v Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/model/submodules/DMA_LCD_ctrl.vhd
+    Info (12022): Found design unit 1: DMA_LCD_ctrl-rtl File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/DMA_LCD_ctrl.vhd Line: 36
+    Info (12023): Found entity 1: DMA_LCD_ctrl File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/DMA_LCD_ctrl.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/model/submodules/GPIO.vhd
+    Info (12022): Found design unit 1: ParallelPort-comp File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/GPIO.vhd Line: 20
+    Info (12023): Found entity 1: ParallelPort File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/GPIO.vhd Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_avalon_st_pipeline_stage.sv
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_default_burst_converter.sv
+    Info (12023): Found entity 1: altera_default_burst_converter File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_default_burst_converter.sv Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_incr_burst_converter.sv
+    Info (12023): Found entity 1: altera_incr_burst_converter File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_incr_burst_converter.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_address_alignment.sv Line: 26
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_burst_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_adapter.sv Line: 21
+Info (12021): Found 5 design units, including 5 entities, in source file db/ip/model/submodules/altera_merlin_burst_adapter_13_1.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_adapter_13_1.sv Line: 40
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_adapter_13_1.sv Line: 55
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_adapter_13_1.sv Line: 77
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_adapter_13_1.sv Line: 98
+    Info (12023): Found entity 5: altera_merlin_burst_adapter_13_1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_adapter_13_1.sv Line: 264
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_burst_adapter_new.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_new File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_adapter_new.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_burst_adapter_uncmpr.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_uncompressed_only File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_adapter_uncmpr.sv Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/altera_merlin_reorder_memory.sv
+    Info (12023): Found entity 1: altera_merlin_reorder_memory File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_reorder_memory.sv Line: 28
+    Info (12023): Found entity 2: memory_pointer_controller File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_reorder_memory.sv Line: 185
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_traffic_limiter.sv
+    Info (12023): Found entity 1: altera_merlin_traffic_limiter File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_traffic_limiter.sv Line: 49
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_merlin_width_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_width_adapter File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_merlin_width_adapter.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_up_altpll.v
+    Info (12023): Found entity 1: altera_up_altpll File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_up_altpll.v Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_up_avalon_reset_from_locked_signal.v
+    Info (12023): Found entity 1: altera_up_avalon_reset_from_locked_signal File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_up_avalon_reset_from_locked_signal.v Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/altera_wrap_burst_converter.sv
+    Info (12023): Found entity 1: altera_wrap_burst_converter File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_wrap_burst_converter.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_CPU.v
+    Info (12023): Found entity 1: model_CPU File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU.v Line: 9
+Info (12021): Found 27 design units, including 27 entities, in source file db/ip/model/submodules/model_CPU_cpu.v
+    Info (12023): Found entity 1: model_CPU_cpu_ic_data_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 21
+    Info (12023): Found entity 2: model_CPU_cpu_ic_tag_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 89
+    Info (12023): Found entity 3: model_CPU_cpu_bht_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 158
+    Info (12023): Found entity 4: model_CPU_cpu_register_bank_a_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 227
+    Info (12023): Found entity 5: model_CPU_cpu_register_bank_b_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 293
+    Info (12023): Found entity 6: model_CPU_cpu_dc_tag_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 359
+    Info (12023): Found entity 7: model_CPU_cpu_dc_data_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 425
+    Info (12023): Found entity 8: model_CPU_cpu_dc_victim_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 494
+    Info (12023): Found entity 9: model_CPU_cpu_nios2_oci_debug File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 562
+    Info (12023): Found entity 10: model_CPU_cpu_nios2_oci_break File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 708
+    Info (12023): Found entity 11: model_CPU_cpu_nios2_oci_xbrk File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1001
+    Info (12023): Found entity 12: model_CPU_cpu_nios2_oci_dbrk File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1262
+    Info (12023): Found entity 13: model_CPU_cpu_nios2_oci_itrace File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1451
+    Info (12023): Found entity 14: model_CPU_cpu_nios2_oci_td_mode File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1634
+    Info (12023): Found entity 15: model_CPU_cpu_nios2_oci_dtrace File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1702
+    Info (12023): Found entity 16: model_CPU_cpu_nios2_oci_compute_input_tm_cnt File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1784
+    Info (12023): Found entity 17: model_CPU_cpu_nios2_oci_fifo_wrptr_inc File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1856
+    Info (12023): Found entity 18: model_CPU_cpu_nios2_oci_fifo_cnt_inc File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1899
+    Info (12023): Found entity 19: model_CPU_cpu_nios2_oci_fifo File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1946
+    Info (12023): Found entity 20: model_CPU_cpu_nios2_oci_pib File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2432
+    Info (12023): Found entity 21: model_CPU_cpu_nios2_oci_im File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2455
+    Info (12023): Found entity 22: model_CPU_cpu_nios2_performance_monitors File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2525
+    Info (12023): Found entity 23: model_CPU_cpu_nios2_avalon_reg File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2542
+    Info (12023): Found entity 24: model_CPU_cpu_ociram_sp_ram_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2635
+    Info (12023): Found entity 25: model_CPU_cpu_nios2_ocimem File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2700
+    Info (12023): Found entity 26: model_CPU_cpu_nios2_oci File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2881
+    Info (12023): Found entity 27: model_CPU_cpu File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3426
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_CPU_cpu_debug_slave_sysclk.v
+    Info (12023): Found entity 1: model_CPU_cpu_debug_slave_sysclk File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_debug_slave_sysclk.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_CPU_cpu_debug_slave_tck.v
+    Info (12023): Found entity 1: model_CPU_cpu_debug_slave_tck File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_debug_slave_tck.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_CPU_cpu_debug_slave_wrapper.v
+    Info (12023): Found entity 1: model_CPU_cpu_debug_slave_wrapper File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_debug_slave_wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_CPU_cpu_mult_cell.v
+    Info (12023): Found entity 1: model_CPU_cpu_mult_cell File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_mult_cell.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_CPU_cpu_test_bench.v
+    Info (12023): Found entity 1: model_CPU_cpu_test_bench File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_test_bench.v Line: 21
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/model_SDRAM_controller.v
+    Info (12023): Found entity 1: model_SDRAM_controller_input_efifo_module File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_SDRAM_controller.v Line: 21
+    Info (12023): Found entity 2: model_SDRAM_controller File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_SDRAM_controller.v Line: 159
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_irq_mapper.sv
+    Info (12023): Found entity 1: model_irq_mapper File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_irq_mapper.sv Line: 31
+Info (12021): Found 5 design units, including 5 entities, in source file db/ip/model/submodules/model_jtag_uart.v
+    Info (12023): Found entity 1: model_jtag_uart_sim_scfifo_w File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 21
+    Info (12023): Found entity 2: model_jtag_uart_scfifo_w File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 78
+    Info (12023): Found entity 3: model_jtag_uart_sim_scfifo_r File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 164
+    Info (12023): Found entity 4: model_jtag_uart_scfifo_r File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 243
+    Info (12023): Found entity 5: model_jtag_uart File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 331
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0.v
+    Info (12023): Found entity 1: model_mm_interconnect_0 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: model_mm_interconnect_0_avalon_st_adapter File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_avalon_st_adapter_001.v
+    Info (12023): Found entity 1: model_mm_interconnect_0_avalon_st_adapter_001 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_avalon_st_adapter_001.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_avalon_st_adapter_001_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_cmd_demux File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_cmd_demux_001.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_cmd_demux_001 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_cmd_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_cmd_demux_002.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_cmd_demux_002 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_cmd_demux_002.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_cmd_mux File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_cmd_mux_001.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_cmd_mux_001 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_cmd_mux_001.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_cmd_mux_002.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_cmd_mux_002 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_cmd_mux_002.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_router_default_decode File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: model_mm_interconnect_0_router File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_router_001_default_decode File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: model_mm_interconnect_0_router_001 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_router_002_default_decode File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: model_mm_interconnect_0_router_002 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_router_003.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_router_003_default_decode File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_003.sv Line: 45
+    Info (12023): Found entity 2: model_mm_interconnect_0_router_003 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_003.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_router_004.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_router_004_default_decode File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_004.sv Line: 45
+    Info (12023): Found entity 2: model_mm_interconnect_0_router_004 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_004.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_router_005.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_router_005_default_decode File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_005.sv Line: 45
+    Info (12023): Found entity 2: model_mm_interconnect_0_router_005 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_router_005.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_rsp_demux File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_rsp_demux_001.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_rsp_demux_001 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_rsp_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_rsp_demux_002.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_rsp_demux_002 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_rsp_demux_002.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_rsp_mux File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_rsp_mux_001.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_rsp_mux_001 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_rsp_mux_001.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_mm_interconnect_0_rsp_mux_002.sv
+    Info (12023): Found entity 1: model_mm_interconnect_0_rsp_mux_002 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_mm_interconnect_0_rsp_mux_002.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_sys_sdram_pll_0.v
+    Info (12023): Found entity 1: model_sys_sdram_pll_0 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_sys_sdram_pll_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_sys_sdram_pll_1.v
+    Info (12023): Found entity 1: model_sys_sdram_pll_1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_sys_sdram_pll_1.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_sysid_qsys_0.v
+    Info (12023): Found entity 1: model_sysid_qsys_0 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_sysid_qsys_0.v Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/model/submodules/model_timer_0.v
+    Info (12023): Found entity 1: model_timer_0 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_timer_0.v Line: 21
+Info (12127): Elaborating entity "labo1" for the top level hierarchy
+Info (12128): Elaborating entity "model" for hierarchy "model:inst1"
+Info (12128): Elaborating entity "model_CPU" for hierarchy "model:inst1|model_CPU:cpu" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/model.v Line: 126
+Info (12128): Elaborating entity "model_CPU_cpu" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU.v Line: 69
+Info (12128): Elaborating entity "model_CPU_cpu_test_bench" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_test_bench:the_model_CPU_cpu_test_bench" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 5986
+Info (12128): Elaborating entity "model_CPU_cpu_ic_data_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_data_module:model_CPU_cpu_ic_data" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 6988
+Info (12128): Elaborating entity "altsyncram" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_data_module:model_CPU_cpu_ic_data|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 61
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_data_module:model_CPU_cpu_ic_data|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 61
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_data_module:model_CPU_cpu_ic_data|altsyncram:the_altsyncram" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 61
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "1024"
+    Info (12134): Parameter "numwords_b" = "1024"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "widthad_a" = "10"
+    Info (12134): Parameter "widthad_b" = "10"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ptj1.tdf
+    Info (12023): Found entity 1: altsyncram_ptj1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_ptj1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_ptj1" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_data_module:model_CPU_cpu_ic_data|altsyncram:the_altsyncram|altsyncram_ptj1:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "model_CPU_cpu_ic_tag_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_tag_module:model_CPU_cpu_ic_tag" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 7054
+Info (12128): Elaborating entity "altsyncram" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_tag_module:model_CPU_cpu_ic_tag|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 129
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_tag_module:model_CPU_cpu_ic_tag|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 129
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_tag_module:model_CPU_cpu_ic_tag|altsyncram:the_altsyncram" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 129
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "128"
+    Info (12134): Parameter "numwords_b" = "128"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
+    Info (12134): Parameter "width_a" = "22"
+    Info (12134): Parameter "width_b" = "22"
+    Info (12134): Parameter "widthad_a" = "7"
+    Info (12134): Parameter "widthad_b" = "7"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_kkj1.tdf
+    Info (12023): Found entity 1: altsyncram_kkj1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_kkj1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_kkj1" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_ic_tag_module:model_CPU_cpu_ic_tag|altsyncram:the_altsyncram|altsyncram_kkj1:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "model_CPU_cpu_bht_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_bht_module:model_CPU_cpu_bht" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 7252
+Info (12128): Elaborating entity "altsyncram" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_bht_module:model_CPU_cpu_bht|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 198
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_bht_module:model_CPU_cpu_bht|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 198
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_bht_module:model_CPU_cpu_bht|altsyncram:the_altsyncram" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 198
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "256"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
+    Info (12134): Parameter "width_a" = "2"
+    Info (12134): Parameter "width_b" = "2"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_mhj1.tdf
+    Info (12023): Found entity 1: altsyncram_mhj1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_mhj1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_mhj1" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_bht_module:model_CPU_cpu_bht|altsyncram:the_altsyncram|altsyncram_mhj1:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "model_CPU_cpu_register_bank_a_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_register_bank_a_module:model_CPU_cpu_register_bank_a" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 8209
+Info (12128): Elaborating entity "altsyncram" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_register_bank_a_module:model_CPU_cpu_register_bank_a|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 264
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_register_bank_a_module:model_CPU_cpu_register_bank_a|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 264
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_register_bank_a_module:model_CPU_cpu_register_bank_a|altsyncram:the_altsyncram" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 264
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "32"
+    Info (12134): Parameter "numwords_b" = "32"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "widthad_a" = "5"
+    Info (12134): Parameter "widthad_b" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ssi1.tdf
+    Info (12023): Found entity 1: altsyncram_ssi1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_ssi1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_ssi1" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_register_bank_a_module:model_CPU_cpu_register_bank_a|altsyncram:the_altsyncram|altsyncram_ssi1:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "model_CPU_cpu_register_bank_b_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_register_bank_b_module:model_CPU_cpu_register_bank_b" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 8227
+Info (12128): Elaborating entity "model_CPU_cpu_mult_cell" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 8812
+Info (12128): Elaborating entity "altera_mult_add" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_mult_cell.v Line: 63
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_mult_cell.v Line: 63
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_mult_cell.v Line: 63
+    Info (12134): Parameter "addnsub_multiplier_pipeline_aclr1" = "ACLR0"
+    Info (12134): Parameter "addnsub_multiplier_pipeline_register1" = "CLOCK0"
+    Info (12134): Parameter "addnsub_multiplier_register1" = "UNREGISTERED"
+    Info (12134): Parameter "dedicated_multiplier_circuitry" = "YES"
+    Info (12134): Parameter "input_register_a0" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_b0" = "UNREGISTERED"
+    Info (12134): Parameter "input_source_a0" = "DATAA"
+    Info (12134): Parameter "input_source_b0" = "DATAB"
+    Info (12134): Parameter "lpm_type" = "altera_mult_add"
+    Info (12134): Parameter "multiplier1_direction" = "ADD"
+    Info (12134): Parameter "multiplier_aclr0" = "ACLR0"
+    Info (12134): Parameter "multiplier_register0" = "CLOCK0"
+    Info (12134): Parameter "number_of_multipliers" = "1"
+    Info (12134): Parameter "output_register" = "UNREGISTERED"
+    Info (12134): Parameter "port_addnsub1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_addnsub3" = "PORT_UNUSED"
+    Info (12134): Parameter "representation_a" = "UNSIGNED"
+    Info (12134): Parameter "representation_b" = "UNSIGNED"
+    Info (12134): Parameter "selected_device_family" = "ARRIAIIGX"
+    Info (12134): Parameter "signed_pipeline_aclr_a" = "ACLR0"
+    Info (12134): Parameter "signed_pipeline_aclr_b" = "ACLR0"
+    Info (12134): Parameter "signed_pipeline_register_a" = "CLOCK0"
+    Info (12134): Parameter "signed_pipeline_register_b" = "CLOCK0"
+    Info (12134): Parameter "signed_register_a" = "UNREGISTERED"
+    Info (12134): Parameter "signed_register_b" = "UNREGISTERED"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "16"
+    Info (12134): Parameter "width_result" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altera_mult_add_tdp2.v
+    Info (12023): Found entity 1: altera_mult_add_tdp2 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altera_mult_add_tdp2.v Line: 28
+Info (12128): Elaborating entity "altera_mult_add_tdp2" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add.tdf Line: 454
+Info (12128): Elaborating entity "altera_mult_add_rtl" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altera_mult_add_tdp2.v Line: 116
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altera_mult_add_tdp2.v Line: 116
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altera_mult_add_tdp2.v Line: 116
+    Info (12134): Parameter "accum_direction" = "ADD"
+    Info (12134): Parameter "accum_sload_aclr" = "NONE"
+    Info (12134): Parameter "accum_sload_latency_aclr" = "NONE"
+    Info (12134): Parameter "accum_sload_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "accum_sload_latency_sclr" = "NONE"
+    Info (12134): Parameter "accum_sload_register" = "UNREGISTERED"
+    Info (12134): Parameter "accum_sload_sclr" = "NONE"
+    Info (12134): Parameter "accumulator" = "NO"
+    Info (12134): Parameter "adder1_rounding" = "NO"
+    Info (12134): Parameter "adder3_rounding" = "NO"
+    Info (12134): Parameter "addnsub1_round_aclr" = "NONE"
+    Info (12134): Parameter "addnsub1_round_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "addnsub1_round_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "addnsub1_round_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "addnsub1_round_register" = "UNREGISTERED"
+    Info (12134): Parameter "addnsub1_round_sclr" = "NONE"
+    Info (12134): Parameter "addnsub3_round_aclr" = "NONE"
+    Info (12134): Parameter "addnsub3_round_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "addnsub3_round_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "addnsub3_round_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "addnsub3_round_register" = "UNREGISTERED"
+    Info (12134): Parameter "addnsub3_round_sclr" = "NONE"
+    Info (12134): Parameter "addnsub_multiplier_aclr1" = "NONE"
+    Info (12134): Parameter "addnsub_multiplier_aclr3" = "NONE"
+    Info (12134): Parameter "addnsub_multiplier_latency_aclr1" = "NONE"
+    Info (12134): Parameter "addnsub_multiplier_latency_aclr3" = "NONE"
+    Info (12134): Parameter "addnsub_multiplier_latency_clock1" = "UNREGISTERED"
+    Info (12134): Parameter "addnsub_multiplier_latency_clock3" = "UNREGISTERED"
+    Info (12134): Parameter "addnsub_multiplier_latency_sclr1" = "NONE"
+    Info (12134): Parameter "addnsub_multiplier_latency_sclr3" = "NONE"
+    Info (12134): Parameter "addnsub_multiplier_register1" = "UNREGISTERED"
+    Info (12134): Parameter "addnsub_multiplier_register3" = "UNREGISTERED"
+    Info (12134): Parameter "addnsub_multiplier_sclr1" = "NONE"
+    Info (12134): Parameter "addnsub_multiplier_sclr3" = "NONE"
+    Info (12134): Parameter "chainout_aclr" = "NONE"
+    Info (12134): Parameter "chainout_adder" = "NO"
+    Info (12134): Parameter "chainout_adder_direction" = "ADD"
+    Info (12134): Parameter "chainout_register" = "UNREGISTERED"
+    Info (12134): Parameter "chainout_round_aclr" = "NONE"
+    Info (12134): Parameter "chainout_round_output_aclr" = "NONE"
+    Info (12134): Parameter "chainout_round_output_register" = "UNREGISTERED"
+    Info (12134): Parameter "chainout_round_output_sclr" = "NONE"
+    Info (12134): Parameter "chainout_round_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "chainout_round_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "chainout_round_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "chainout_round_register" = "UNREGISTERED"
+    Info (12134): Parameter "chainout_round_sclr" = "NONE"
+    Info (12134): Parameter "chainout_rounding" = "NO"
+    Info (12134): Parameter "chainout_saturate_aclr" = "NONE"
+    Info (12134): Parameter "chainout_saturate_output_aclr" = "NONE"
+    Info (12134): Parameter "chainout_saturate_output_register" = "UNREGISTERED"
+    Info (12134): Parameter "chainout_saturate_output_sclr" = "NONE"
+    Info (12134): Parameter "chainout_saturate_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "chainout_saturate_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "chainout_saturate_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "chainout_saturate_register" = "UNREGISTERED"
+    Info (12134): Parameter "chainout_saturate_sclr" = "NONE"
+    Info (12134): Parameter "chainout_saturation" = "NO"
+    Info (12134): Parameter "chainout_sclr" = "NONE"
+    Info (12134): Parameter "coef0_0" = "0"
+    Info (12134): Parameter "coef0_1" = "0"
+    Info (12134): Parameter "coef0_2" = "0"
+    Info (12134): Parameter "coef0_3" = "0"
+    Info (12134): Parameter "coef0_4" = "0"
+    Info (12134): Parameter "coef0_5" = "0"
+    Info (12134): Parameter "coef0_6" = "0"
+    Info (12134): Parameter "coef0_7" = "0"
+    Info (12134): Parameter "coef1_0" = "0"
+    Info (12134): Parameter "coef1_1" = "0"
+    Info (12134): Parameter "coef1_2" = "0"
+    Info (12134): Parameter "coef1_3" = "0"
+    Info (12134): Parameter "coef1_4" = "0"
+    Info (12134): Parameter "coef1_5" = "0"
+    Info (12134): Parameter "coef1_6" = "0"
+    Info (12134): Parameter "coef1_7" = "0"
+    Info (12134): Parameter "coef2_0" = "0"
+    Info (12134): Parameter "coef2_1" = "0"
+    Info (12134): Parameter "coef2_2" = "0"
+    Info (12134): Parameter "coef2_3" = "0"
+    Info (12134): Parameter "coef2_4" = "0"
+    Info (12134): Parameter "coef2_5" = "0"
+    Info (12134): Parameter "coef2_6" = "0"
+    Info (12134): Parameter "coef2_7" = "0"
+    Info (12134): Parameter "coef3_0" = "0"
+    Info (12134): Parameter "coef3_1" = "0"
+    Info (12134): Parameter "coef3_2" = "0"
+    Info (12134): Parameter "coef3_3" = "0"
+    Info (12134): Parameter "coef3_4" = "0"
+    Info (12134): Parameter "coef3_5" = "0"
+    Info (12134): Parameter "coef3_6" = "0"
+    Info (12134): Parameter "coef3_7" = "0"
+    Info (12134): Parameter "coefsel0_aclr" = "NONE"
+    Info (12134): Parameter "coefsel0_latency_aclr" = "NONE"
+    Info (12134): Parameter "coefsel0_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "coefsel0_latency_sclr" = "NONE"
+    Info (12134): Parameter "coefsel0_register" = "UNREGISTERED"
+    Info (12134): Parameter "coefsel0_sclr" = "NONE"
+    Info (12134): Parameter "coefsel1_aclr" = "NONE"
+    Info (12134): Parameter "coefsel1_latency_aclr" = "NONE"
+    Info (12134): Parameter "coefsel1_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "coefsel1_latency_sclr" = "NONE"
+    Info (12134): Parameter "coefsel1_register" = "UNREGISTERED"
+    Info (12134): Parameter "coefsel1_sclr" = "NONE"
+    Info (12134): Parameter "coefsel2_aclr" = "NONE"
+    Info (12134): Parameter "coefsel2_latency_aclr" = "NONE"
+    Info (12134): Parameter "coefsel2_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "coefsel2_latency_sclr" = "NONE"
+    Info (12134): Parameter "coefsel2_register" = "UNREGISTERED"
+    Info (12134): Parameter "coefsel2_sclr" = "NONE"
+    Info (12134): Parameter "coefsel3_aclr" = "NONE"
+    Info (12134): Parameter "coefsel3_latency_aclr" = "NONE"
+    Info (12134): Parameter "coefsel3_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "coefsel3_latency_sclr" = "NONE"
+    Info (12134): Parameter "coefsel3_register" = "UNREGISTERED"
+    Info (12134): Parameter "coefsel3_sclr" = "NONE"
+    Info (12134): Parameter "dedicated_multiplier_circuitry" = "YES"
+    Info (12134): Parameter "double_accum" = "NO"
+    Info (12134): Parameter "dsp_block_balancing" = "Auto"
+    Info (12134): Parameter "extra_latency" = "0"
+    Info (12134): Parameter "input_a0_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_a0_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_a0_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_a1_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_a1_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_a1_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_a2_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_a2_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_a2_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_a3_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_a3_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_a3_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_aclr_a0" = "NONE"
+    Info (12134): Parameter "input_aclr_a1" = "NONE"
+    Info (12134): Parameter "input_aclr_a2" = "NONE"
+    Info (12134): Parameter "input_aclr_a3" = "NONE"
+    Info (12134): Parameter "input_aclr_b0" = "NONE"
+    Info (12134): Parameter "input_aclr_b1" = "NONE"
+    Info (12134): Parameter "input_aclr_b2" = "NONE"
+    Info (12134): Parameter "input_aclr_b3" = "NONE"
+    Info (12134): Parameter "input_aclr_c0" = "NONE"
+    Info (12134): Parameter "input_aclr_c1" = "NONE"
+    Info (12134): Parameter "input_aclr_c2" = "NONE"
+    Info (12134): Parameter "input_aclr_c3" = "NONE"
+    Info (12134): Parameter "input_b0_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_b0_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_b0_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_b1_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_b1_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_b1_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_b2_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_b2_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_b2_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_b3_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_b3_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_b3_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_c0_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_c0_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_c0_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_c1_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_c1_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_c1_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_c2_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_c2_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_c2_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_c3_latency_aclr" = "NONE"
+    Info (12134): Parameter "input_c3_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "input_c3_latency_sclr" = "NONE"
+    Info (12134): Parameter "input_register_a0" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_a1" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_a2" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_a3" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_b0" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_b1" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_b2" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_b3" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_c0" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_c1" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_c2" = "UNREGISTERED"
+    Info (12134): Parameter "input_register_c3" = "UNREGISTERED"
+    Info (12134): Parameter "input_sclr_a0" = "NONE"
+    Info (12134): Parameter "input_sclr_a1" = "NONE"
+    Info (12134): Parameter "input_sclr_a2" = "NONE"
+    Info (12134): Parameter "input_sclr_a3" = "NONE"
+    Info (12134): Parameter "input_sclr_b0" = "NONE"
+    Info (12134): Parameter "input_sclr_b1" = "NONE"
+    Info (12134): Parameter "input_sclr_b2" = "NONE"
+    Info (12134): Parameter "input_sclr_b3" = "NONE"
+    Info (12134): Parameter "input_sclr_c0" = "NONE"
+    Info (12134): Parameter "input_sclr_c1" = "NONE"
+    Info (12134): Parameter "input_sclr_c2" = "NONE"
+    Info (12134): Parameter "input_sclr_c3" = "NONE"
+    Info (12134): Parameter "input_source_a0" = "DATAA"
+    Info (12134): Parameter "input_source_a1" = "DATAA"
+    Info (12134): Parameter "input_source_a2" = "DATAA"
+    Info (12134): Parameter "input_source_a3" = "DATAA"
+    Info (12134): Parameter "input_source_b0" = "DATAB"
+    Info (12134): Parameter "input_source_b1" = "DATAB"
+    Info (12134): Parameter "input_source_b2" = "DATAB"
+    Info (12134): Parameter "input_source_b3" = "DATAB"
+    Info (12134): Parameter "latency" = "0"
+    Info (12134): Parameter "loadconst_control_aclr" = "NONE"
+    Info (12134): Parameter "loadconst_control_register" = "UNREGISTERED"
+    Info (12134): Parameter "loadconst_control_sclr" = "NONE"
+    Info (12134): Parameter "loadconst_value" = "64"
+    Info (12134): Parameter "mult01_round_aclr" = "NONE"
+    Info (12134): Parameter "mult01_round_register" = "UNREGISTERED"
+    Info (12134): Parameter "mult01_round_sclr" = "NONE"
+    Info (12134): Parameter "mult01_saturation_aclr" = "ACLR0"
+    Info (12134): Parameter "mult01_saturation_register" = "UNREGISTERED"
+    Info (12134): Parameter "mult01_saturation_sclr" = "ACLR0"
+    Info (12134): Parameter "mult23_round_aclr" = "NONE"
+    Info (12134): Parameter "mult23_round_register" = "UNREGISTERED"
+    Info (12134): Parameter "mult23_round_sclr" = "NONE"
+    Info (12134): Parameter "mult23_saturation_aclr" = "NONE"
+    Info (12134): Parameter "mult23_saturation_register" = "UNREGISTERED"
+    Info (12134): Parameter "mult23_saturation_sclr" = "NONE"
+    Info (12134): Parameter "multiplier01_rounding" = "NO"
+    Info (12134): Parameter "multiplier01_saturation" = "NO"
+    Info (12134): Parameter "multiplier1_direction" = "ADD"
+    Info (12134): Parameter "multiplier23_rounding" = "NO"
+    Info (12134): Parameter "multiplier23_saturation" = "NO"
+    Info (12134): Parameter "multiplier3_direction" = "ADD"
+    Info (12134): Parameter "multiplier_aclr0" = "ACLR0"
+    Info (12134): Parameter "multiplier_aclr1" = "NONE"
+    Info (12134): Parameter "multiplier_aclr2" = "NONE"
+    Info (12134): Parameter "multiplier_aclr3" = "NONE"
+    Info (12134): Parameter "multiplier_register0" = "CLOCK0"
+    Info (12134): Parameter "multiplier_register1" = "UNREGISTERED"
+    Info (12134): Parameter "multiplier_register2" = "UNREGISTERED"
+    Info (12134): Parameter "multiplier_register3" = "UNREGISTERED"
+    Info (12134): Parameter "multiplier_sclr0" = "NONE"
+    Info (12134): Parameter "multiplier_sclr1" = "NONE"
+    Info (12134): Parameter "multiplier_sclr2" = "NONE"
+    Info (12134): Parameter "multiplier_sclr3" = "NONE"
+    Info (12134): Parameter "negate_aclr" = "NONE"
+    Info (12134): Parameter "negate_latency_aclr" = "NONE"
+    Info (12134): Parameter "negate_latency_clock" = "UNREGISTERED"
+    Info (12134): Parameter "negate_latency_sclr" = "NONE"
+    Info (12134): Parameter "negate_register" = "UNREGISTERED"
+    Info (12134): Parameter "negate_sclr" = "NONE"
+    Info (12134): Parameter "number_of_multipliers" = "1"
+    Info (12134): Parameter "output_aclr" = "NONE"
+    Info (12134): Parameter "output_register" = "UNREGISTERED"
+    Info (12134): Parameter "output_round_aclr" = "NONE"
+    Info (12134): Parameter "output_round_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "output_round_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "output_round_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "output_round_register" = "UNREGISTERED"
+    Info (12134): Parameter "output_round_sclr" = "NONE"
+    Info (12134): Parameter "output_round_type" = "NEAREST_INTEGER"
+    Info (12134): Parameter "output_rounding" = "NO"
+    Info (12134): Parameter "output_saturate_aclr" = "NONE"
+    Info (12134): Parameter "output_saturate_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "output_saturate_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "output_saturate_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "output_saturate_register" = "UNREGISTERED"
+    Info (12134): Parameter "output_saturate_sclr" = "NONE"
+    Info (12134): Parameter "output_saturate_type" = "ASYMMETRIC"
+    Info (12134): Parameter "output_saturation" = "NO"
+    Info (12134): Parameter "output_sclr" = "NONE"
+    Info (12134): Parameter "port_addnsub1" = "PORT_UNUSED"
+    Info (12134): Parameter "port_addnsub3" = "PORT_UNUSED"
+    Info (12134): Parameter "port_chainout_sat_is_overflow" = "PORT_UNUSED"
+    Info (12134): Parameter "port_negate" = "PORT_UNUSED"
+    Info (12134): Parameter "port_output_is_overflow" = "PORT_UNUSED"
+    Info (12134): Parameter "port_signa" = "PORT_UNUSED"
+    Info (12134): Parameter "port_signb" = "PORT_UNUSED"
+    Info (12134): Parameter "preadder_direction_0" = "ADD"
+    Info (12134): Parameter "preadder_direction_1" = "ADD"
+    Info (12134): Parameter "preadder_direction_2" = "ADD"
+    Info (12134): Parameter "preadder_direction_3" = "ADD"
+    Info (12134): Parameter "preadder_mode" = "SIMPLE"
+    Info (12134): Parameter "representation_a" = "UNSIGNED"
+    Info (12134): Parameter "representation_b" = "UNSIGNED"
+    Info (12134): Parameter "rotate_aclr" = "NONE"
+    Info (12134): Parameter "rotate_output_aclr" = "NONE"
+    Info (12134): Parameter "rotate_output_register" = "UNREGISTERED"
+    Info (12134): Parameter "rotate_output_sclr" = "NONE"
+    Info (12134): Parameter "rotate_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "rotate_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "rotate_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "rotate_register" = "UNREGISTERED"
+    Info (12134): Parameter "rotate_sclr" = "NONE"
+    Info (12134): Parameter "scanouta_aclr" = "NONE"
+    Info (12134): Parameter "scanouta_register" = "UNREGISTERED"
+    Info (12134): Parameter "scanouta_sclr" = "NONE"
+    Info (12134): Parameter "selected_device_family" = "Arria II GX"
+    Info (12134): Parameter "shift_mode" = "NO"
+    Info (12134): Parameter "shift_right_aclr" = "NONE"
+    Info (12134): Parameter "shift_right_output_aclr" = "NONE"
+    Info (12134): Parameter "shift_right_output_register" = "UNREGISTERED"
+    Info (12134): Parameter "shift_right_output_sclr" = "NONE"
+    Info (12134): Parameter "shift_right_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "shift_right_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "shift_right_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "shift_right_register" = "UNREGISTERED"
+    Info (12134): Parameter "shift_right_sclr" = "NONE"
+    Info (12134): Parameter "signed_aclr_a" = "NONE"
+    Info (12134): Parameter "signed_aclr_b" = "NONE"
+    Info (12134): Parameter "signed_latency_aclr_a" = "NONE"
+    Info (12134): Parameter "signed_latency_aclr_b" = "NONE"
+    Info (12134): Parameter "signed_latency_clock_a" = "UNREGISTERED"
+    Info (12134): Parameter "signed_latency_clock_b" = "UNREGISTERED"
+    Info (12134): Parameter "signed_latency_sclr_a" = "NONE"
+    Info (12134): Parameter "signed_latency_sclr_b" = "NONE"
+    Info (12134): Parameter "signed_register_a" = "UNREGISTERED"
+    Info (12134): Parameter "signed_register_b" = "UNREGISTERED"
+    Info (12134): Parameter "signed_sclr_a" = "NONE"
+    Info (12134): Parameter "signed_sclr_b" = "NONE"
+    Info (12134): Parameter "systolic_aclr1" = "NONE"
+    Info (12134): Parameter "systolic_aclr3" = "NONE"
+    Info (12134): Parameter "systolic_delay1" = "UNREGISTERED"
+    Info (12134): Parameter "systolic_delay3" = "UNREGISTERED"
+    Info (12134): Parameter "systolic_sclr1" = "NONE"
+    Info (12134): Parameter "systolic_sclr3" = "NONE"
+    Info (12134): Parameter "use_sload_accum_port" = "NO"
+    Info (12134): Parameter "use_subnadd" = "NO"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_b" = "16"
+    Info (12134): Parameter "width_c" = "22"
+    Info (12134): Parameter "width_chainin" = "1"
+    Info (12134): Parameter "width_coef" = "18"
+    Info (12134): Parameter "width_msb" = "17"
+    Info (12134): Parameter "width_result" = "32"
+    Info (12134): Parameter "width_saturate_sign" = "1"
+    Info (12134): Parameter "zero_chainout_output_aclr" = "NONE"
+    Info (12134): Parameter "zero_chainout_output_register" = "UNREGISTERED"
+    Info (12134): Parameter "zero_chainout_output_sclr" = "NONE"
+    Info (12134): Parameter "zero_loopback_aclr" = "NONE"
+    Info (12134): Parameter "zero_loopback_output_aclr" = "NONE"
+    Info (12134): Parameter "zero_loopback_output_register" = "UNREGISTERED"
+    Info (12134): Parameter "zero_loopback_output_sclr" = "NONE"
+    Info (12134): Parameter "zero_loopback_pipeline_aclr" = "NONE"
+    Info (12134): Parameter "zero_loopback_pipeline_register" = "UNREGISTERED"
+    Info (12134): Parameter "zero_loopback_pipeline_sclr" = "NONE"
+    Info (12134): Parameter "zero_loopback_register" = "UNREGISTERED"
+    Info (12134): Parameter "zero_loopback_sclr" = "NONE"
+    Info (12134): Parameter "lpm_type" = "altera_mult_add_rtl"
+Info (12128): Elaborating entity "ama_register_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_register_function:signa_reg_block" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 907
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_register_function:signa_reg_block", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 907
+Info (12128): Elaborating entity "ama_data_split_reg_ext_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:dataa_split" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1023
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:dataa_split", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1023
+Info (12128): Elaborating entity "ama_register_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:dataa_split|ama_register_function:data_register_block_0" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1989
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:dataa_split|ama_register_function:data_register_block_0", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1989
+Info (12128): Elaborating entity "ama_dynamic_signed_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:dataa_split|ama_dynamic_signed_function:data0_signed_extension_block" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2145
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:dataa_split|ama_dynamic_signed_function:data0_signed_extension_block", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2145
+Info (12128): Elaborating entity "ama_data_split_reg_ext_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:datac_split" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1113
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:datac_split", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1113
+Info (12128): Elaborating entity "ama_register_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:datac_split|ama_register_function:data_register_block_0" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1989
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:datac_split|ama_register_function:data_register_block_0", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1989
+Info (12128): Elaborating entity "ama_dynamic_signed_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:datac_split|ama_dynamic_signed_function:data0_signed_extension_block" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2145
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_data_split_reg_ext_function:datac_split|ama_dynamic_signed_function:data0_signed_extension_block", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2145
+Info (12128): Elaborating entity "ama_preadder_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_preadder_function:preadder_block" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1265
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_preadder_function:preadder_block", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1265
+Info (12128): Elaborating entity "ama_adder_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_preadder_function:preadder_block|ama_adder_function:preadder_adder_0" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 3264
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_preadder_function:preadder_block|ama_adder_function:preadder_adder_0", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 3264
+Info (12128): Elaborating entity "ama_signed_extension_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_preadder_function:preadder_block|ama_adder_function:preadder_adder_0|ama_signed_extension_function:first_adder_ext_block_0" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2705
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_preadder_function:preadder_block|ama_adder_function:preadder_adder_0|ama_signed_extension_function:first_adder_ext_block_0", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2705
+Info (12128): Elaborating entity "ama_signed_extension_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_preadder_function:preadder_block|ama_adder_function:preadder_adder_0|ama_signed_extension_function:second_adder_ext_block_0" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2738
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_preadder_function:preadder_block|ama_adder_function:preadder_adder_0|ama_signed_extension_function:second_adder_ext_block_0", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2738
+Info (12128): Elaborating entity "ama_multiplier_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1309
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1309
+Info (12128): Elaborating entity "ama_register_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|ama_register_function:multiplier_register_block_0" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 3060
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|ama_register_function:multiplier_register_block_0", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 3060
+Info (12128): Elaborating entity "ama_register_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|ama_register_function:multiplier_register_block_1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 3074
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_multiplier_function:multiplier_block|ama_register_function:multiplier_register_block_1", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 3074
+Info (12128): Elaborating entity "ama_adder_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_adder_function:final_adder_block" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1350
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_adder_function:final_adder_block", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1350
+Info (12128): Elaborating entity "ama_signed_extension_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_adder_function:final_adder_block|ama_signed_extension_function:first_adder_ext_block_0" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2705
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_adder_function:final_adder_block|ama_signed_extension_function:first_adder_ext_block_0", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2705
+Info (12128): Elaborating entity "ama_signed_extension_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_adder_function:final_adder_block|ama_signed_extension_function:second_adder_ext_block_0" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2738
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_adder_function:final_adder_block|ama_signed_extension_function:second_adder_ext_block_0", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 2738
+Info (12128): Elaborating entity "ama_register_function" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_register_function:output_reg_block" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1490
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1|ama_register_function:output_reg_block", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_mult_cell:the_model_CPU_cpu_mult_cell|altera_mult_add:the_altmult_add_p1|altera_mult_add_tdp2:auto_generated|altera_mult_add_rtl:altera_mult_add_rtl1" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altera_mult_add_rtl.v Line: 1490
+Info (12128): Elaborating entity "model_CPU_cpu_dc_tag_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_tag_module:model_CPU_cpu_dc_tag" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 9234
+Info (12128): Elaborating entity "altsyncram" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_tag_module:model_CPU_cpu_dc_tag|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 396
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_tag_module:model_CPU_cpu_dc_tag|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 396
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_tag_module:model_CPU_cpu_dc_tag|altsyncram:the_altsyncram" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 396
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "64"
+    Info (12134): Parameter "numwords_b" = "64"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
+    Info (12134): Parameter "width_a" = "17"
+    Info (12134): Parameter "width_b" = "17"
+    Info (12134): Parameter "widthad_a" = "6"
+    Info (12134): Parameter "widthad_b" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_eti1.tdf
+    Info (12023): Found entity 1: altsyncram_eti1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_eti1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_eti1" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_tag_module:model_CPU_cpu_dc_tag|altsyncram:the_altsyncram|altsyncram_eti1:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "model_CPU_cpu_dc_data_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_data_module:model_CPU_cpu_dc_data" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 9300
+Info (12128): Elaborating entity "altsyncram" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_data_module:model_CPU_cpu_dc_data|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 465
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_data_module:model_CPU_cpu_dc_data|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 465
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_data_module:model_CPU_cpu_dc_data|altsyncram:the_altsyncram" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 465
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "512"
+    Info (12134): Parameter "numwords_b" = "512"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+    Info (12134): Parameter "widthad_a" = "9"
+    Info (12134): Parameter "widthad_b" = "9"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1ol1.tdf
+    Info (12023): Found entity 1: altsyncram_1ol1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_1ol1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_1ol1" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_data_module:model_CPU_cpu_dc_data|altsyncram:the_altsyncram|altsyncram_1ol1:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "model_CPU_cpu_dc_victim_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_victim_module:model_CPU_cpu_dc_victim" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 9412
+Info (12128): Elaborating entity "altsyncram" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_victim_module:model_CPU_cpu_dc_victim|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 534
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_victim_module:model_CPU_cpu_dc_victim|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 534
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_victim_module:model_CPU_cpu_dc_victim|altsyncram:the_altsyncram" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 534
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "8"
+    Info (12134): Parameter "numwords_b" = "8"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK0"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "widthad_a" = "3"
+    Info (12134): Parameter "widthad_b" = "3"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8ej1.tdf
+    Info (12023): Found entity 1: altsyncram_8ej1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_8ej1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_8ej1" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_dc_victim_module:model_CPU_cpu_dc_victim|altsyncram:the_altsyncram|altsyncram_8ej1:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 10217
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_debug" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_debug:the_model_CPU_cpu_nios2_oci_debug" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3098
+Info (12128): Elaborating entity "altera_std_synchronizer" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_debug:the_model_CPU_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 632
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_debug:the_model_CPU_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 632
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_debug:the_model_CPU_cpu_nios2_oci_debug|altera_std_synchronizer:the_altera_std_synchronizer" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 632
+    Info (12134): Parameter "depth" = "2"
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_break" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_break:the_model_CPU_cpu_nios2_oci_break" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3128
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_xbrk" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_xbrk:the_model_CPU_cpu_nios2_oci_xbrk" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3151
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_dbrk" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_dbrk:the_model_CPU_cpu_nios2_oci_dbrk" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3178
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_itrace" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_itrace:the_model_CPU_cpu_nios2_oci_itrace" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3216
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_dtrace" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_dtrace:the_model_CPU_cpu_nios2_oci_dtrace" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3231
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_td_mode" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_dtrace:the_model_CPU_cpu_nios2_oci_dtrace|model_CPU_cpu_nios2_oci_td_mode:model_CPU_cpu_nios2_oci_trc_ctrl_td_mode" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 1752
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_fifo" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_fifo:the_model_CPU_cpu_nios2_oci_fifo" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3246
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_compute_input_tm_cnt" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_fifo:the_model_CPU_cpu_nios2_oci_fifo|model_CPU_cpu_nios2_oci_compute_input_tm_cnt:the_model_CPU_cpu_nios2_oci_compute_input_tm_cnt" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2065
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_fifo_wrptr_inc" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_fifo:the_model_CPU_cpu_nios2_oci_fifo|model_CPU_cpu_nios2_oci_fifo_wrptr_inc:the_model_CPU_cpu_nios2_oci_fifo_wrptr_inc" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2074
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_fifo_cnt_inc" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_fifo:the_model_CPU_cpu_nios2_oci_fifo|model_CPU_cpu_nios2_oci_fifo_cnt_inc:the_model_CPU_cpu_nios2_oci_fifo_cnt_inc" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2083
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_pib" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_pib:the_model_CPU_cpu_nios2_oci_pib" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3251
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_oci_im" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_oci_im:the_model_CPU_cpu_nios2_oci_im" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3265
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_avalon_reg" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_avalon_reg:the_model_CPU_cpu_nios2_avalon_reg" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3284
+Info (12128): Elaborating entity "model_CPU_cpu_nios2_ocimem" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_ocimem:the_model_CPU_cpu_nios2_ocimem" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3304
+Info (12128): Elaborating entity "model_CPU_cpu_ociram_sp_ram_module" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_ocimem:the_model_CPU_cpu_nios2_ocimem|model_CPU_cpu_ociram_sp_ram_module:model_CPU_cpu_ociram_sp_ram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2851
+Info (12128): Elaborating entity "altsyncram" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_ocimem:the_model_CPU_cpu_nios2_ocimem|model_CPU_cpu_ociram_sp_ram_module:model_CPU_cpu_ociram_sp_ram|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2675
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_ocimem:the_model_CPU_cpu_nios2_ocimem|model_CPU_cpu_ociram_sp_ram_module:model_CPU_cpu_ociram_sp_ram|altsyncram:the_altsyncram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2675
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_ocimem:the_model_CPU_cpu_nios2_ocimem|model_CPU_cpu_ociram_sp_ram_module:model_CPU_cpu_ociram_sp_ram|altsyncram:the_altsyncram" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 2675
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "DONT_CARE"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+    Info (12134): Parameter "widthad_a" = "8"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nmd1.tdf
+    Info (12023): Found entity 1: altsyncram_nmd1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_nmd1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_nmd1" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_nios2_ocimem:the_model_CPU_cpu_nios2_ocimem|model_CPU_cpu_ociram_sp_ram_module:model_CPU_cpu_ociram_sp_ram|altsyncram:the_altsyncram|altsyncram_nmd1:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "model_CPU_cpu_debug_slave_wrapper" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu.v Line: 3406
+Info (12128): Elaborating entity "model_CPU_cpu_debug_slave_tck" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|model_CPU_cpu_debug_slave_tck:the_model_CPU_cpu_debug_slave_tck" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_debug_slave_wrapper.v Line: 157
+Info (12128): Elaborating entity "model_CPU_cpu_debug_slave_sysclk" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|model_CPU_cpu_debug_slave_sysclk:the_model_CPU_cpu_debug_slave_sysclk" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_debug_slave_wrapper.v Line: 177
+Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:model_CPU_cpu_debug_slave_phy" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_debug_slave_wrapper.v Line: 207
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:model_CPU_cpu_debug_slave_phy" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_debug_slave_wrapper.v Line: 207
+Info (12133): Instantiated megafunction "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:model_CPU_cpu_debug_slave_phy" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_CPU_cpu_debug_slave_wrapper.v Line: 207
+    Info (12134): Parameter "sld_auto_instance_index" = "YES"
+    Info (12134): Parameter "sld_instance_index" = "0"
+    Info (12134): Parameter "sld_ir_width" = "2"
+    Info (12134): Parameter "sld_mfg_id" = "70"
+    Info (12134): Parameter "sld_sim_action" = ""
+    Info (12134): Parameter "sld_sim_n_scan" = "0"
+    Info (12134): Parameter "sld_sim_total_length" = "0"
+    Info (12134): Parameter "sld_type_id" = "34"
+    Info (12134): Parameter "sld_version" = "3"
+Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:model_CPU_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 151
+Info (12131): Elaborated megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:model_CPU_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:model_CPU_cpu_debug_slave_phy" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 151
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:model_CPU_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 414
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "model:inst1|model_CPU:cpu|model_CPU_cpu:cpu|model_CPU_cpu_nios2_oci:the_model_CPU_cpu_nios2_oci|model_CPU_cpu_debug_slave_wrapper:the_model_CPU_cpu_debug_slave_wrapper|sld_virtual_jtag_basic:model_CPU_cpu_debug_slave_phy|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "DMA_LCD_ctrl" for hierarchy "model:inst1|DMA_LCD_ctrl:lcd_dma_ctrl_0" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/model.v Line: 150
+Info (12128): Elaborating entity "ParallelPort" for hierarchy "model:inst1|ParallelPort:leds_controller_0" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/model.v Line: 162
+Info (12128): Elaborating entity "model_SDRAM_controller" for hierarchy "model:inst1|model_SDRAM_controller:sdram_controller" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/model.v Line: 185
+Info (12128): Elaborating entity "model_SDRAM_controller_input_efifo_module" for hierarchy "model:inst1|model_SDRAM_controller:sdram_controller|model_SDRAM_controller_input_efifo_module:the_model_SDRAM_controller_input_efifo_module" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_SDRAM_controller.v Line: 298
+Info (12128): Elaborating entity "model_jtag_uart" for hierarchy "model:inst1|model_jtag_uart:jtag_uart" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/model.v Line: 198
+Info (12128): Elaborating entity "model_jtag_uart_scfifo_w" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 420
+Info (12128): Elaborating entity "scfifo" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 139
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 139
+Info (12133): Instantiated megafunction "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 139
+    Info (12134): Parameter "lpm_hint" = "RAM_BLOCK_TYPE=AUTO"
+    Info (12134): Parameter "lpm_numwords" = "64"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "8"
+    Info (12134): Parameter "lpm_widthu" = "6"
+    Info (12134): Parameter "overflow_checking" = "OFF"
+    Info (12134): Parameter "underflow_checking" = "OFF"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_0691.tdf
+    Info (12023): Found entity 1: scfifo_0691 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/scfifo_0691.tdf Line: 24
+Info (12128): Elaborating entity "scfifo_0691" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_0691:auto_generated" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/scfifo.tdf Line: 299
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_2b71.tdf
+    Info (12023): Found entity 1: a_dpfifo_2b71 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/a_dpfifo_2b71.tdf Line: 28
+Info (12128): Elaborating entity "a_dpfifo_2b71" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_0691:auto_generated|a_dpfifo_2b71:dpfifo" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/scfifo_0691.tdf Line: 37
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_7cf.tdf
+    Info (12023): Found entity 1: a_fefifo_7cf File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/a_fefifo_7cf.tdf Line: 24
+Info (12128): Elaborating entity "a_fefifo_7cf" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_0691:auto_generated|a_dpfifo_2b71:dpfifo|a_fefifo_7cf:fifo_state" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/a_dpfifo_2b71.tdf Line: 42
+Warning (12136): Clear box output file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/cntr_do7.tdf is not compatible with the current compile. Used regenerated output file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/cntr_do7.tdf for elaboration
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_do7.tdf
+    Info (12023): Found entity 1: cntr_do7 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/cntr_do7.tdf Line: 25
+Info (12128): Elaborating entity "cntr_do7" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_0691:auto_generated|a_dpfifo_2b71:dpfifo|a_fefifo_7cf:fifo_state|cntr_do7:count_usedw" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/a_fefifo_7cf.tdf Line: 38
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4tu1.tdf
+    Info (12023): Found entity 1: altsyncram_4tu1 File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/altsyncram_4tu1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_4tu1" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_0691:auto_generated|a_dpfifo_2b71:dpfifo|altsyncram_4tu1:FIFOram" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/a_dpfifo_2b71.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_gkb.tdf
+    Info (12023): Found entity 1: cntr_gkb File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/cntr_gkb.tdf Line: 25
+Info (12128): Elaborating entity "cntr_gkb" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_w:the_model_jtag_uart_scfifo_w|scfifo:wfifo|scfifo_0691:auto_generated|a_dpfifo_2b71:dpfifo|cntr_gkb:rd_ptr_count" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/a_dpfifo_2b71.tdf Line: 44
+Info (12128): Elaborating entity "model_jtag_uart_scfifo_r" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|model_jtag_uart_scfifo_r:the_model_jtag_uart_scfifo_r" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 434
+Info (12128): Elaborating entity "alt_jtag_atlantic" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|alt_jtag_atlantic:model_jtag_uart_alt_jtag_atlantic" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 569
+Info (12130): Elaborated megafunction instantiation "model:inst1|model_jtag_uart:jtag_uart|alt_jtag_atlantic:model_jtag_uart_alt_jtag_atlantic" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 569
+Info (12133): Instantiated megafunction "model:inst1|model_jtag_uart:jtag_uart|alt_jtag_atlantic:model_jtag_uart_alt_jtag_atlantic" with the following parameter: File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_jtag_uart.v Line: 569
+    Info (12134): Parameter "INSTANCE_ID" = "0"
+    Info (12134): Parameter "LOG2_RXFIFO_DEPTH" = "6"
+    Info (12134): Parameter "LOG2_TXFIFO_DEPTH" = "6"
+    Info (12134): Parameter "SLD_AUTO_INSTANCE_INDEX" = "YES"
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|alt_jtag_atlantic:model_jtag_uart_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/alt_jtag_atlantic.v Line: 276
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "model:inst1|model_jtag_uart:jtag_uart|alt_jtag_atlantic:model_jtag_uart_alt_jtag_atlantic|sld_jtag_endpoint_adapter:inst|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: /home/deremos/intelFPGA_lite/18.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "model_sys_sdram_pll_0" for hierarchy "model:inst1|model_sys_sdram_pll_0:sys_sdram_pll_0" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/model.v Line: 205
+Info (12128): Elaborating entity "altera_up_altpll" for hierarchy "model:inst1|model_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/model_sys_sdram_pll_0.v Line: 34
+Error (272006): MGL_INTERNAL_ERROR: Port altpll|clk is of width 6 but the range indices are (6, 0) CAUSE : The range indices are illegal, either the higher index is more than the width of the port or the lower index is less than 0. File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_up_altpll.v Line: 140
+Error (272006): MGL_INTERNAL_ERROR: Port altpll|clk of width 6 is being made an assignment of altpll|stratixii_pll inst pll1|clk|range--w_clk_range1w in the range 6 to 0 CAUSE : An attempt was made to assign a bit that is not there in the port. File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_up_altpll.v Line: 140
+Info (12128): Elaborating entity "altpll" for hierarchy "model:inst1|model_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_up_altpll.v Line: 140
+Error (12152): Can't elaborate user hierarchy "model:inst1|model_sys_sdram_pll_0:sys_sdram_pll_0|altera_up_altpll:sys_pll|altpll:PLL_for_DE_Series_Boards" File: /home/deremos/Documents/Master/EmbHard/embHard/quartus3/db/ip/model/submodules/altera_up_altpll.v Line: 140
+Info (144001): Generated suppressed messages file /home/deremos/Documents/Master/EmbHard/embHard/quartus3/output_files/labo1.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 2 warnings
+    Error: Peak virtual memory: 1135 megabytes
+    Error: Processing ended: Tue Nov  5 14:08:20 2024
+    Error: Elapsed time: 00:00:33
+    Error: Total CPU time (on all processors): 00:01:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/deremos/Documents/Master/EmbHard/embHard/quartus3/output_files/labo1.map.smsg.
+
+
