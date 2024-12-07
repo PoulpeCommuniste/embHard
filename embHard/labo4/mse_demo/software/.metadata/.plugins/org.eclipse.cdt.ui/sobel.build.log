@@ -1,32 +1,89 @@
-18:48:17 **** Incremental Build of configuration Nios II for project sobel ****
+16:30:54 **** Incremental Build of configuration Nios II for project sobel ****
 make all 
 Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
 make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
 [BSP build complete]
 Info: Compiling sobel.c to obj/default/sobel.o
-nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall -O3 -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:29:33: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                 ^
+sobel.c:29:33: note: (near initialization for 'index_array_x_0')
+sobel.c:29:35: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                   ^
+sobel.c:29:35: note: (near initialization for 'index_array_x_0')
+sobel.c:29:37: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                     ^
+sobel.c:29:37: note: (near initialization for 'index_array_x_0')
+sobel.c:29:39: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                       ^
+sobel.c:29:39: note: (near initialization for 'index_array_x_0')
+sobel.c:29:41: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                         ^
+sobel.c:29:41: note: (near initialization for 'index_array_x_0')
+sobel.c:29:43: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                           ^
+sobel.c:29:43: note: (near initialization for 'index_array_x_0')
+sobel.c:29:45: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                             ^
+sobel.c:29:45: note: (near initialization for 'index_array_x_0')
+sobel.c:30:33: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                 ^
+sobel.c:30:33: note: (near initialization for 'index_array_x_2')
+sobel.c:30:35: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                   ^
+sobel.c:30:35: note: (near initialization for 'index_array_x_2')
+sobel.c:30:37: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                     ^
+sobel.c:30:37: note: (near initialization for 'index_array_x_2')
+sobel.c:30:39: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                       ^
+sobel.c:30:39: note: (near initialization for 'index_array_x_2')
+sobel.c:30:41: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                         ^
+sobel.c:30:41: note: (near initialization for 'index_array_x_2')
+sobel.c:30:43: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                           ^
+sobel.c:30:43: note: (near initialization for 'index_array_x_2')
+sobel.c:30:45: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                             ^
+sobel.c:30:45: note: (near initialization for 'index_array_x_2')
 sobel.c: In function 'sobel_x_with_rgb':
-sobel.c:127:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+sobel.c:130:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
         result = sobel_mac(source,x,y,gx_array,sobel_width);
                                       ^
-sobel.c:82:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+sobel.c:85:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
  short sobel_mac( unsigned char *pixels,
        ^
 sobel.c: In function 'sobel_y_with_rgb':
-sobel.c:165:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+sobel.c:168:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
         result = sobel_mac(source,x,y,gy_array,sobel_width);
-                                      ^
-sobel.c:82:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
- short sobel_mac( unsigned char *pixels,
-       ^
 Info: Linking sobel.elf
-nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall -O3 -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+                                      ^
+sobel.c:85:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+       ^
 nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
-Info: (sobel.elf) 77 KBytes program size (code + initialized data).
-Info:             16299 KBytes free for stack + heap.
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16297 KBytes free for stack + heap.
 Info: Creating sobel.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
 [sobel build complete]
 
-18:48:18 Build Finished (took 1s.19ms)
+16:30:55 Build Finished (took 811ms)
 

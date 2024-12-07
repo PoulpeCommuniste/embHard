@@ -1188,3 +1188,342 @@ Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING
 	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
 	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
 	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:30:22.211
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:30:25.988
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --tcpport=auto --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY org.eclipse.cdt.debug.mi.core 4 42 2024-12-07 10:32:04.323
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.cdt.debug.mi.core.cdi.MI2CDIException: Inferior terminated[]
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.getMIShareds(SharedLibraryManager.java:123)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.updateState(SharedLibraryManager.java:189)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.update(SharedLibraryManager.java:137)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.processSuspendedEvent(EventManager.java:329)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.update(EventManager.java:101)
+	at java.util.Observable.notifyObservers(Unknown Source)
+	at org.eclipse.cdt.debug.mi.core.MISession.notifyObservers(MISession.java:797)
+	at org.eclipse.cdt.debug.mi.core.EventThread.run(EventThread.java:47)
+
+!ENTRY org.eclipse.ui 4 4 2024-12-07 10:33:41.426
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@1d81dece)} vs {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@5da3f32a)}
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:35:14.020
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:35:17.984
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --tcpport=auto --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:36:21.920
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:36:24.441
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:37:33.139
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:37:33.429
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:37:37.297
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --tcpport=auto --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:38:52.578
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:38:56.425
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --tcpport=auto --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+!SESSION 2024-12-07 10:40:32.025 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/deremos/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/deremos/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-12-07 10:40:43.061
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:41:14.160
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:41:16.664
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:44:59.161
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:44:59.462
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:45:01.980
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:51:54.702
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:51:54.977
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:51:57.490
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:54:26.219
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:54:26.505
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:54:29.020
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:56:22.958
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:56:23.230
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:56:25.743
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:58:54.571
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:58:54.842
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 10:58:58.702
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --tcpport=auto --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:02:56.746
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:03:00.778
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:03:03.290
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:12:54.663
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:12:54.936
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:12:57.446
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:21:43.022
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:21:43.315
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:21:45.924
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:27:32.566
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:27:32.832
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 11:27:35.347
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+!SESSION 2024-12-07 12:10:15.509 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/deremos/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/deremos/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-12-07 12:10:24.539
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-12-07 12:10:32.320
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-07 12:12:05.053
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2024-12-07 12:12:05.065
+!MESSAGE Unable to validate connection settings.
+!STACK 0
+java.lang.Exception
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.validateConnectionSettings(SystemConsoleConnectionModel.java:555)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:115)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2024-12-07 12:12:46.210 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_05
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/deremos/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product -pluginCustomization /home/deremos/intelFPGA_lite/18.1/nios2eds/bin/eclipse_nios2/plugin_customization.ini
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2024-12-07 12:13:02.184
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 1.100.0.v20160217-0435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:88)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:13:10.329
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:13:12.815
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:16:13.694
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:16:13.995
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:16:16.509
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:24:11.445
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:24:11.748
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:24:14.263
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:41:18.188
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:41:18.565
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:41:21.073
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:44:35.178
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:44:35.468
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 12:44:37.987
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 14:26:45.226
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 14:26:45.497
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 14:26:48.027
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 14:55:01.723
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 14:55:02.013
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 14:55:04.536
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:02:22.782
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:02:23.074
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:02:25.694
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:06:14.581
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:06:14.888
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:06:17.424
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:07:11.823
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:07:12.120
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 15:07:16.025
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --tcpport=auto --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 16:30:55.721
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [1-2]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 16:30:59.395
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --stop --sidp=0x10010d8 --id=0x0 --timestamp=1731432368]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2024-12-07 16:31:01.915
+!MESSAGE Executing: [/bin/bash, -c, nios2-download '--cable=USB-Blaster on localhost [1-2]' --device=1 --instance=0 --go --sidp=0x10010d8 --id=0x0 --timestamp=1731432368 /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel/sobel.elf]

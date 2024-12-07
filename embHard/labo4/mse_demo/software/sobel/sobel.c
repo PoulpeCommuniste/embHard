@@ -25,32 +25,38 @@ int sobel_height;
 void sobel_complete( unsigned char * source )
 {
 	int x,y;
-	short result = 0;
+	int index_array[4]= {0,0,0,0};
+	int index_array_x_0[3]= {0,0,0};
+	int index_array_x_2[3]= {0,0,0};
+	index_array[1] = sobel_width;
+	index_array[2] = sobel_width<<1;
+
 	   for (y = 1 ; y < (sobel_height-1) ; y++) { // TODO calcule des indices une fois additionner sur la ligne
+		  index_array_x_0[0] = index_array[1]-1;
+		  index_array_x_2[0] = index_array[2]-1;
+		  index_array_x_0[1] = index_array[1];
+		  index_array_x_2[1] = index_array[2];
+		  index_array_x_0[2] = index_array[1]+1;
+		  index_array_x_2[2] = index_array[2]+1;
 	      for (x = 1 ; x < (sobel_width-1) ; x++) {
-				result += gx_array[0][0]*source[(y-1)*sobel_width+(x-1)];
-				result += gx_array[0][2]*source[(y-1)*sobel_width+(x+1)];
-				result += gx_array[1][0]*source[(y)*sobel_width+(x-1)];
-				result += gx_array[1][2]*source[(y)*sobel_width+(x+1)];
-				result += gx_array[2][0]*source[(y+1)*sobel_width+(x-1)];
-				result += gx_array[2][2]*source[(y+1)*sobel_width+(x+1)];
-				sobel_x_result[y*sobel_width+x] = result;
-				result = 0;
+	    	  	index_array[4] = index_array[1]+ x;
+
+	    	  	sobel_x_result[index_array[4]] = (source[index_array_x_0[1]])-(source[index_array_x_0[0]])-(source[index_array_x_0[2]] << 1)+(source[index_array_x_2[0]]<<2)-(source[index_array_x_2[1]]) + (source[index_array_x_2[2]]);
+	    	  	sobel_y_result[index_array[4]] = (source[index_array_x_0[0]])+(source[index_array_x_0[1]]<<1)+(source[index_array_x_0[2]])-(source[index_array_x_2[0]])-(source[index_array_x_2[1]]<<2) - (source[index_array_x_2[2]]);
+				//sobel_x_result[index] = (gx_array[0][0]*source[index-sobel_width-1])+(gx_array[0][2]*source[index-sobel_width])+(gx_array[1][0]*source[index-sobel_width+1])+(gx_array[1][2]*source[index+sobel_width-1])+(gx_array[2][0]*source[index+sobel_width]) + (gx_array[2][2]*source[index+sobel_width+1]) ;
+				//sobel_y_result[index] = (gy_array[0][0]*source[index-sobel_width-1])+(gy_array[0][1]*source[index-sobel_width])+(gy_array[0][2]*source[index-sobel_width+1])+(gy_array[2][0]*source[index+sobel_width-1])+(gy_array[2][1]*source[index+sobel_width]) + (gy_array[2][2]*source[index+sobel_width+1]) ;
+				index_array_x_0[0] = index_array_x_0[1];
+				index_array_x_2[0] = index_array_x_2[1];
+				index_array_x_0[1] = index_array_x_0[2];
+				index_array_x_2[1] = index_array_x_2[2];
+				index_array_x_0[2] = index_array_x_0[1]+1;
+				index_array_x_2[2] = index_array_x_2[1]+1;
 	      }
+	      index_array[0] = index_array[1];
+		  index_array[1] = index_array[2];
+		  index_array[2] = index_array[1]+sobel_width;
 	   }
 
-	   for (y = 1 ; y < (sobel_height-1) ; y++) {
-	         for (x = 1 ; x < (sobel_width-1) ; x++) {
-	       	    result += gy_array[0][0]*source[(y-1)*sobel_width+(x-1)];
-	       	    result += gy_array[0][1]*source[(y-1)*sobel_width+(x)];
-	       	    result += gy_array[0][2]*source[(y-1)*sobel_width+(x+1)];
-	       	    result += gy_array[2][0]*source[(y+1)*sobel_width+(x-1)];
-	   			result += gy_array[2][1]*source[(y+1)*sobel_width+(x)];
-	   			result += gy_array[2][2]*source[(y+1)*sobel_width+(x+1)];
-	   			sobel_y_result[y*sobel_width+x] = result ;// sobel_mac(source,x,y,gy_array,sobel_width);
-	   			result = 0;
-		 }
-	  }
 }
 void init_sobel_arrays(int width , int height) {
 	int loop;

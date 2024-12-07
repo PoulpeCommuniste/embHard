@@ -28,11 +28,40 @@ time sobel x: 422351730
 time sobel y: 423080566
 time sobel threshold : 103208549
 ⨪0 enlever l'appel de fonction ”in-line"
-hallotime convolution grayscale: 370
-time sobel x: 28920904
-time sobel y: 26718426
-time sobel threshold : 31539322
-# avec le sobel_complete
-hallotime convolution grayscale: 404
-time sobel: 55395192
-time sobel threshold : 31157081
+hallotime convolution grayscale: 477
+time sobel x: 325476420
+time sobel y: 322259123
+time sobel threshold : 102550324
+-0 # avec la fonction sobel_complete
+hallotime convolution grayscale: 474
+time sobel: 642783469
+time sobel threshold : 102073395
+-0  avec la fonction sobel_complete sans les calcul des 0
+hallotime convolution grayscale: 465
+time sobel: 458685932
+time sobel threshold : 102072033
+-0  avec la fonction sobel_complete sans les calcul des 0 + calul des index unique
+hallotime convolution grayscale: 487
+time sobel: 398818651
+time sobel threshold : 102213997
+-0  avec la fonction sobel_complete sans les calcul des 0 + calul des index unique + calcul sur une ligne
+hallotime convolution grayscale: 414
+time sobel: 329362729
+time sobel threshold : 101840995
+-0  avec la fonction sobel_complete sans les calcul des 0 + calul des index unique + calcul sur une ligne + merge des deux sobel dans une double boucle
+hallotime convolution grayscale: 460
+time sobel: 309361505
+time sobel threshold : 101990682
+-0  avec la fonction sobel_complete sans les calcul des 0 + calul des index unique + calcul sur une ligne + merge des deux sobel dans une double boucle+ optimisation du calcul du sobel
+time sobel threshold : 102852575
+hallotime convolution grayscale: 484
+time sobel: 280762906
+= 3655 cycles pixel
+-0  avec la fonction sobel_complete sans les calcul des 0 + calul des index unique + calcul sur une ligne + merge des deux sobel dans une double boucle+ optimisation du calcul du sobel +mise en array des calculs d'index
+hallotime convolution grayscale: 453
+time sobel: 272090420
+time sobel threshold : 102437396
+-0  avec la fonction sobel_complete sans les calcul des 0 + calul des index unique + calcul sur une ligne + merge des deux sobel dans une double boucle+ optimisation du calcul du sobel +mise en array des calculs d'index+ l'unique calcul du y de l'index par chaque y
+hallotime convolution grayscale: 440
+time sobel: 266606957
+time sobel threshold : 102611940

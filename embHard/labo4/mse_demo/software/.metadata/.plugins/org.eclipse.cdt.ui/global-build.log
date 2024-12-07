@@ -1802,3 +1802,751 @@ Info:             16299 KBytes free for stack + heap.
 Info: Creating sobel.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
 [sobel build complete]
+10:30:19 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall -O3 -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:125:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:80:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:163:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:80:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall -O3 -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 77 KBytes program size (code + initialized data).
+Info:             16299 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+10:35:11 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling camera.c to obj/default/camera.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/camera.o camera.c
+Info: Compiling dipswitch.c to obj/default/dipswitch.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/dipswitch.o dipswitch.c
+Info: Compiling grayscale.c to obj/default/grayscale.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/grayscale.o grayscale.c
+Info: Compiling i2c.c to obj/default/i2c.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/i2c.o i2c.c
+i2c.c: In function 'i2c_auto_detect':
+i2c.c:25:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("Number of I2C devices detected: %d\n",nrdef);
+     ^
+i2c.c:25:5: warning: incompatible implicit declaration of built-in function 'printf'
+i2c.c:25:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+Info: Compiling lcd_simple.c to obj/default/lcd_simple.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/lcd_simple.o lcd_simple.c
+lcd_simple.c: In function 'LCD_Write_Command':
+lcd_simple.c:18:2: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  usleep(10);
+  ^
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:125:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:80:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:163:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:80:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Compiling vga.c to obj/default/vga.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/vga.o vga.c
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+10:36:20 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+10:37:32 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+10:38:51 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+10:41:12 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+10:44:57 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+10:51:53 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:131:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:86:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:169:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:86:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 81 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+10:54:24 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 81 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+10:56:21 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 81 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+10:58:53 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 81 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+11:02:55 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:125:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:80:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:163:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:80:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+11:12:53 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:126:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:81:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:164:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:81:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+11:21:41 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: variable 'result' set but not used [-Wunused-but-set-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:114:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:69:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:152:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:69:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+11:27:31 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:108:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:63:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:146:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:63:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+12:11:58 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+12:13:08 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+12:16:11 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:29:6: warning: variable 'index' set but not used [-Wunused-but-set-variable]
+  int index = 0;
+      ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:132:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:87:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:170:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:87:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 81 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+12:24:09 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:133:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:88:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:171:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:88:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16296 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+12:41:00 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:37:8: error: expected ';' before '}' token
+        }
+        ^
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:110:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:65:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:148:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:65:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+make: *** [Makefile:782: obj/default/sobel.o] Error 1
+12:41:16 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:110:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:65:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:148:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:65:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16297 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+12:44:33 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:110:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:65:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:148:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:65:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16297 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+14:26:44 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+[sobel build complete]
+14:54:37 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:40:25: error: 'index' undeclared (first use in this function)
+          sobel_x_result[index] = (source[index_array[1]])-(source[index_array[4]])-(source[index_array[3]] << 1)+(source[index_array[6]]<<2)-(source[index_array[2]]) + (source[index_array[5]]);
+                         ^
+sobel.c:40:25: note: each undeclared identifier is reported only once for each function it appears in
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:117:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:72:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:155:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:72:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+make: *** [Makefile:782: obj/default/sobel.o] Error 1
+14:55:00 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:117:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:72:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:155:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:72:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16297 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+15:02:21 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:118:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:73:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:156:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:73:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16297 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+15:06:13 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:118:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:73:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:156:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:73:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16297 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+15:07:10 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:28:8: warning: unused variable 'result' [-Wunused-variable]
+  short result = 0;
+        ^
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:118:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:73:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:156:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+                                      ^
+sobel.c:73:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+Info: Linking sobel.elf
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16297 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
+16:30:54 **** Incremental Build of configuration Nios II for project sobel ****
+make all 
+Info: Building /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+make --no-print-directory -C /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/
+[BSP build complete]
+Info: Compiling sobel.c to obj/default/sobel.o
+nios2-elf-gcc -xc -MP -MMD -c -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//HAL/inc -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/ -I/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/sobel.o sobel.c
+sobel.c: In function 'sobel_complete':
+sobel.c:29:33: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                 ^
+sobel.c:29:33: note: (near initialization for 'index_array_x_0')
+sobel.c:29:35: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                   ^
+sobel.c:29:35: note: (near initialization for 'index_array_x_0')
+sobel.c:29:37: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                     ^
+sobel.c:29:37: note: (near initialization for 'index_array_x_0')
+sobel.c:29:39: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                       ^
+sobel.c:29:39: note: (near initialization for 'index_array_x_0')
+sobel.c:29:41: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                         ^
+sobel.c:29:41: note: (near initialization for 'index_array_x_0')
+sobel.c:29:43: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                           ^
+sobel.c:29:43: note: (near initialization for 'index_array_x_0')
+sobel.c:29:45: warning: excess elements in array initializer
+  int index_array_x_0[3]= {0,0,0,0,0,0,0,0,0,0};
+                                             ^
+sobel.c:29:45: note: (near initialization for 'index_array_x_0')
+sobel.c:30:33: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                 ^
+sobel.c:30:33: note: (near initialization for 'index_array_x_2')
+sobel.c:30:35: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                   ^
+sobel.c:30:35: note: (near initialization for 'index_array_x_2')
+sobel.c:30:37: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                     ^
+sobel.c:30:37: note: (near initialization for 'index_array_x_2')
+sobel.c:30:39: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                       ^
+sobel.c:30:39: note: (near initialization for 'index_array_x_2')
+sobel.c:30:41: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                         ^
+sobel.c:30:41: note: (near initialization for 'index_array_x_2')
+sobel.c:30:43: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                           ^
+sobel.c:30:43: note: (near initialization for 'index_array_x_2')
+sobel.c:30:45: warning: excess elements in array initializer
+  int index_array_x_2[3]= {0,0,0,0,0,0,0,0,0,0};
+                                             ^
+sobel.c:30:45: note: (near initialization for 'index_array_x_2')
+sobel.c: In function 'sobel_x_with_rgb':
+sobel.c:130:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gx_array,sobel_width);
+                                      ^
+sobel.c:85:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+       ^
+sobel.c: In function 'sobel_y_with_rgb':
+sobel.c:168:38: warning: passing argument 4 of 'sobel_mac' from incompatible pointer type [-Wincompatible-pointer-types]
+        result = sobel_mac(source,x,y,gy_array,sobel_width);
+Info: Linking sobel.elf
+                                      ^
+sobel.c:85:7: note: expected 'const char *' but argument is of type 'const char (*)[3]'
+ short sobel_mac( unsigned char *pixels,
+nios2-elf-g++ -T'/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//linker.x' -msys-crt0='/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/software/sobel_bsp/   -Wl,-Map=sobel.map   -O0 -g -Wall  -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o sobel.elf obj/default/camera.o obj/default/dipswitch.o obj/default/grayscale.o obj/default/i2c.o obj/default/lcd_simple.o obj/default/main.o obj/default/sobel.o obj/default/vga.o -lm -msys-lib=m
+       ^
+nios2-elf-insert sobel.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x10010d8 --timestamp 1731432368 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name base_system --quartus_project_dir "/home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project" --jdi /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/mse_demo.jdi --sopcinfo /home/deremos/Documents/Master/EmbHard/embHard/labo4/mse_demo/quartus_project/base_system.sopcinfo
+Info: (sobel.elf) 80 KBytes program size (code + initialized data).
+Info:             16297 KBytes free for stack + heap.
+Info: Creating sobel.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source sobel.elf >sobel.objdump
+[sobel build complete]
